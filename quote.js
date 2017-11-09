@@ -11,38 +11,53 @@ function User(fName, lName, company, email, phone) {
   userInfo.push(this);
 }
 
-function Project(basic, eCommerce, pages, products, rush) {
-  this.basic = basic;
-  this.eCommerce = eCommerce;
+function Project(projectType, pages, products, rush) {
+  this.projectType = projectType;
   this.pages = parseInt(pages);
   this.products = parseInt(products);
   this.rush = rush;
   this.totalCost = 0;
   this.calcCost = function() {
-    if (this.basic === true) {
+    var pagesCost = 0;
+    var productsCost = 0;
+    if (this.projectType === 'basic') {
       this.totalCost += 5000;
+      pagesCost = (Math.ceil(this.pages / 5)) * 750;
+      this.totalCost = this.totalCost + pagesCost;
     }
-    if (this.eCommerce === true) {
+    if (this.projectType === 'eCommerce') {
       this.totalCost += 15000;
+      pagesCost = (Math.ceil(this.pages / 5)) * 750;
+      productsCost = (Math.ceil(this.products / 5)) * 750;
+      this.totalCost = this.totalCost + pagesCost + productsCost;
     }
-    var pagesCost = (Math.floor(this.pages / 5)) * 750;
-    var productsCost = (Math.floor(this.products / 5)) * 750;
-    this.totalCost = this.totalCost + pagesCost + productsCost;
-  };
-  this.timeframe = function() {
-    //calc timeFrame
-    //rush order x2
+    if (this.rush === 'rush') {
+      this.totalCost = this.totalCost * 2;
+    }
   };
   projectQuote.push(this);
 }
-var newProject = new Project(false, true, 12, 10, false);
-newProject.calcCost();
-console.log('For an eCommerce site with 12 pages, 10 products, and no rush, the cost is: $' + newProject.totalCost);
 
 var basicFormEl = document.getElementById('basicForm');
 
-function submitBasicForm (event) {
+function submitBasicForm(event) {
   event.preventDefault();
 
   var firstName = event.target.fName.value;
 }
+
+var projectInfo = document.getElementById('projectInfo');
+
+function submitProjectInfo(event) {
+  event.preventDefault();
+
+  var projectType = event.target.projectType.value;
+  var pages = event.target.pages.value;
+  var products = event.target.products.value;
+  var rush = event.target.rush.value;
+
+  var newProject = new Project(projectType, pages, products, rush);
+  newProject.calcCost();
+}
+
+projectInfo.addEventListener('submit', submitProjectInfo);
