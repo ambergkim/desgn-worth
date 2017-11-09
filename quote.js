@@ -2,10 +2,18 @@
 var userInfo = [];
 var projectQuote = [];
 
+<<<<<<< HEAD
 function User(fName, lName, company, email, phone) {
   this.fName = fName;
   this.lName = lName;
   this.company = company;
+=======
+  function User(fName, lName, company, email, phone) {
+  this.fName = fName;
+  this.lName = lName;
+  this.company = company;
+
+>>>>>>> 1e50762836e02dcdf660753e07d0975d382a24dd
   this.email = email;
   this.phone = phone;
   userInfo.push(this);
