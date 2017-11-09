@@ -17,6 +17,7 @@ function Project(projectType, pages, products, rush) {
   this.products = parseInt(products);
   this.rush = rush;
   this.totalCost = 0;
+  this.timeline = 0;
   this.calcCost = function() {
     var pagesCost = 0;
     var productsCost = 0;
@@ -33,6 +34,19 @@ function Project(projectType, pages, products, rush) {
     }
     if (this.rush === 'rush') {
       this.totalCost = this.totalCost * 2;
+    }
+  };
+  this.calcTime = function() {
+    if (this.projectType === 'basic') {
+      this.timeline = 8;
+      this.timeline += (Math.ceil(this.pages / 5)) * 2;
+    }
+    if (this.projectType === 'eCommerce') {
+      this.timeline = 24;
+      this.timeline += (Math.ceil(this.products / 5)) * 2;
+    }
+    if (this.rush === 'rush') {
+      this.timeline = Math.ceil(this.timeline / 2);
     }
   };
   projectQuote.push(this);
@@ -55,9 +69,18 @@ function submitProjectInfo(event) {
   var pages = event.target.pages.value;
   var products = event.target.products.value;
   var rush = event.target.rush.value;
+  console.log('rush value: ' + rush);
 
   var newProject = new Project(projectType, pages, products, rush);
   newProject.calcCost();
+  newProject.calcTime();
+
+  console.log(newProject.timeline + ' weeks');
+}
+
+function displayBreakdown() {
+  var currentProject = projectQuote[0];
+
 }
 
 projectInfo.addEventListener('submit', submitProjectInfo);
