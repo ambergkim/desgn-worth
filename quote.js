@@ -42,8 +42,12 @@ function Project(projectType, pages, products, rush) {
       this.timeline += (Math.ceil(this.pages / 5)) * 2;
     }
     if (this.projectType === 'eCommerce') {
-      this.timeline = 24;
-      this.timeline += (Math.ceil(this.products / 5)) * 2;
+      if (this.products) {
+        this.timeline = 24;
+        this.timeline += (Math.ceil(this.products / 5)) * 2;
+      } else {
+        this.timeline = 24;
+      }
     }
     if (this.rush === 'rush') {
       this.timeline = Math.ceil(this.timeline / 2);
