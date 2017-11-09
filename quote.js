@@ -2,10 +2,11 @@
 var userInfo = [];
 var projectQuote = [];
 
-function User(fName, lName, company, email, phone) {
+  function User(fName, lName, company, email, phone) {
   this.fName = fName;
   this.lName = lName;
   this.company = company;
+
   this.email = email;
   this.phone = phone;
   userInfo.push(this);
