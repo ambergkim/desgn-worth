@@ -2,10 +2,10 @@
 var userInfo = [];
 var projectQuote = [];
 
-function User() {
-  this.fname = fname;
-  this.lname = lname;
-  this.company = comapny;
+function User(fName, lName, company, email, phone) {
+  this.fName = fName;
+  this.lName = lName;
+  this.company = company;
   this.email = email;
   this.phone = phone;
   userInfo.push(this);
@@ -38,3 +38,11 @@ function Project(basic, eCommerce, pages, products, rush) {
 var newProject = new Project(false, true, 12, 10, false);
 newProject.calcCost();
 console.log('For an eCommerce site with 12 pages, 10 products, and no rush, the cost is: $' + newProject.totalCost);
+
+var basicFormEl = document.getElementById('basicForm');
+
+function submitBasicForm (event) {
+  event.preventDefault();
+
+  var firstName = event.target.fName.value;
+}
