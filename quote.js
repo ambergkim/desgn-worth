@@ -1,7 +1,7 @@
 'use strict';
 var userInfo = [];
 var projectQuote = [];
-// constructor function for user object
+
 function User(fName, lName, company, email, phone) {
   this.fName = fName;
   this.lName = lName;
@@ -27,4 +27,12 @@ function Project() {
     //rush order x2
   };
   projectQuote.push(this);
+}
+
+var basicFormEl = document.getElementById('basicForm');
+
+function submitBasicForm (event) {
+  event.preventDefault();
+
+  var firstName = event.target.fName.value;
 }
