@@ -16,7 +16,15 @@ function Project() {
   this.eCommerce = eCommerce;
   this.pages = pages;
   this.products = products;
-  this.cost = cost;
-  this.timeframe = timeFrame;
+  this.rush = boolean;
+  this.cost = function() {
+    //add base cost
+    //calc pages cost
+    //calc products if eCommerce
+  };
+  this.timeframe = function() {
+    //calc timeFrame
+    //rush order x2
+  };
   projectQuote.push(this);
 }
