@@ -28,3 +28,11 @@ function Project() {
   };
   projectQuote.push(this);
 }
+
+var basicFormEl = document.getElementById('basicForm');
+
+function submitBasicForm (event) {
+  event.preventDefault();
+
+  var firstName = event.target.fName.value;
+}
