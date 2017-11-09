@@ -1,7 +1,7 @@
 'use strict';
 var userInfo = [];
 var projectQuote = [];
-
+// constructor function for user object
 function User(fName, lName, company, email, phone) {
   this.fName = fName;
   this.lName = lName;
