@@ -2,12 +2,14 @@
 var userInfo = [];
 var projectQuote = [];
 
-function User(fName, lName, company, email, phone) {
+function User(fName, lName, company, email, phone, sDate, eDate) {
   this.fName = fName;
   this.lName = lName;
   this.company = company;
   this.email = email;
   this.phone = phone;
+  this.sDate = sDate;
+  this.eDate = eDate;
   userInfo.push(this);
 }
 
@@ -20,8 +22,10 @@ function submitBasicForm(event) {
   var company = event.target.company.value;
   var email = event.target.email.value;
   var phone = event.target.phone.value;
+  var startDate = event.target.sDate.value;
+  var endDate = event.target.eDate.value;
 
-  new User (firstName, lastName, company, email, phone);
+  new User (firstName, lastName, company, email, phone, startDate, endDate);
   console.log(userInfo);
 
   event.target.fName.value = null;
@@ -29,7 +33,9 @@ function submitBasicForm(event) {
   event.target.company.value = null;
   event.target.email.value = null;
   event.target.phone.value = null;
-  
+  event.target.sDate.value = null;
+  event.target.eDate.value = null;
+
   localStorage.setItem('UserOne', JSON.stringify(userInfo));
   var retrievedObject = localStorage.getItem('UserOne');
 }
