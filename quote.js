@@ -11,11 +11,11 @@ function User(fName, lName, company, email, phone) {
   userInfo.push(this);
 }
 
-function Project(projectType, pages, products, rush) {
+function Project(projectType, pages, products, rushOrder) {
   this.projectType = projectType;
   this.pages = parseInt(pages);
   this.products = parseInt(products);
-  this.rush = rush;
+  this.rush = rushOrder;
   this.totalCost = 0;
   this.timeline = 0;
   this.calcCost = function() {
@@ -32,7 +32,7 @@ function Project(projectType, pages, products, rush) {
       productsCost = (Math.ceil(this.products / 5)) * 750;
       this.totalCost = this.totalCost + pagesCost + productsCost;
     }
-    if (this.rush === 'rush') {
+    if (this.rush === true) {
       this.totalCost = this.totalCost * 2;
     }
   };
@@ -49,7 +49,7 @@ function Project(projectType, pages, products, rush) {
         this.timeline = 24;
       }
     }
-    if (this.rush === 'rush') {
+    if (this.rush === true) {
       this.timeline = Math.ceil(this.timeline / 2);
     }
   };
@@ -72,10 +72,10 @@ function submitProjectInfo(event) {
   var projectType = event.target.projectType.value;
   var pages = event.target.pages.value;
   var products = event.target.products.value;
-  var rush = event.target.rush.value;
-  console.log('rush value: ' + rush);
+  var rushOrder = event.target.rush.checked;
+  console.log('rush value: ' + rushOrder);
 
-  var newProject = new Project(projectType, pages, products, rush);
+  var newProject = new Project(projectType, pages, products, rushOrder);
   newProject.calcCost();
   newProject.calcTime();
 
