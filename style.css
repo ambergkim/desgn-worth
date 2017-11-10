@@ -1,16 +1,58 @@
 * {
   font-family: 'Cabin', sans-serif;
-  font-size: 16px;
-}
-
-h1 {
-  font-family: 'Abel', sans-serif;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
 }
 
+.navlogo {
+  margin: 0 auto;
+
+}
+
+.navcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+#section1 {
+  background: url(img/mountain.jpg);
+  height: 50vh;
+  background-size: cover;
+  padding-top: 30%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.bannerquote {
+  font-size: 2em;
+  text-align: center;
+}
+
 .img-circle {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bio {
+  border: solid 1px black;
+  margin: 5%;
+  padding: 5%;
+  flex-basis: auto;
+  font-size: 20px;
 }
