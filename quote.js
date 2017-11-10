@@ -14,6 +14,9 @@ function User(fName, lName, company, email, phone, sDate, eDate) {
 }
 
 var basicFormEl = document.getElementById('basicForm');
+// var today = new Date(), day = today.getDate(), month = today.getMonth(), year = today.getFullYear();
+// var todaysDate = document.getElementById('sDate');
+// todaysDate.min = month + '-' + '0' + day + '-' + year;
 
 function submitBasicForm(event) {
   event.preventDefault();
@@ -39,7 +42,6 @@ function submitBasicForm(event) {
   localStorage.setItem('UserOne', JSON.stringify(userInfo));
   var retrievedObject = localStorage.getItem('UserOne');
 }
-
 
 basicFormEl.addEventListener('submit', submitBasicForm);
 
@@ -88,7 +90,6 @@ function Project(projectType, pages, products, rushOrder) {
   projectQuote.push(this);
 }
 
-
 var projectInfo = document.getElementById('projectInfo');
 
 function submitProjectInfo(event) {
@@ -113,3 +114,13 @@ function displayBreakdown() {
 }
 
 projectInfo.addEventListener('submit', submitProjectInfo);
+
+function popProp () {
+  var proposalEl = document.getElementById('proposal');
+  var aboutEl = document.getElementById('about');
+  var breakdownEl = document.getElementById('breakdown');
+  var nextStepsEl = document.getElementById('nextSteps');
+
+  // update text content of <p> to insert final cost value
+  // cost = projectQuote[0].totalCost;
+}
