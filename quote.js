@@ -11,6 +11,32 @@ function User(fName, lName, company, email, phone) {
   userInfo.push(this);
 }
 
+var basicFormEl = document.getElementById('basicForm');
+
+function submitBasicForm(event) {
+  event.preventDefault();
+  var firstName = event.target.fName.value;
+  var lastName = event.target.lName.value;
+  var company = event.target.company.value;
+  var email = event.target.email.value;
+  var phone = event.target.phone.value;
+
+  new User (firstName, lastName, company, email, phone);
+  console.log(userInfo);
+
+  event.target.fName.value = null;
+  event.target.lName.value = null;
+  event.target.company.value = null;
+  event.target.email.value = null;
+  event.target.phone.value = null;
+  
+  localStorage.setItem('UserOne', JSON.stringify(userInfo));
+  var retrievedObject = localStorage.getItem('UserOne');
+}
+
+
+basicFormEl.addEventListener('submit', submitBasicForm);
+
 function Project(projectType, pages, products, rushOrder) {
   this.projectType = projectType;
   this.pages = parseInt(pages);
@@ -56,13 +82,6 @@ function Project(projectType, pages, products, rushOrder) {
   projectQuote.push(this);
 }
 
-var basicFormEl = document.getElementById('basicForm');
-
-function submitBasicForm(event) {
-  event.preventDefault();
-
-  var firstName = event.target.fName.value;
-}
 
 var projectInfo = document.getElementById('projectInfo');
 
