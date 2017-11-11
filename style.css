@@ -74,6 +74,23 @@ nav {
   padding-right: 10%;
 }
 
+#section2 {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#firstperson {
+  padding: 5%;
+}
+
+.testimonial {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: teal;
+}
+
 .bannerquote {
   font-size: 2em;
   text-align: center;
@@ -96,6 +113,7 @@ h1 {
 }
 
 .container {
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -107,4 +125,8 @@ h1 {
   padding: 5%;
   flex-basis: auto;
   font-size: 20px;
+}
+
+#footer {
+  text-align: center;
 }
