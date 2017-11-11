@@ -28,11 +28,6 @@
   margin-right: 5%;
 }
 
-#firstperson {
-  padding: 5%;
-  margin-bottom: -5%;
-}
-
 .testimonial {
   margin-top: 3%;
   margin-left: 5%;
@@ -83,4 +78,107 @@ h1 {
 
 #footer {
   text-align: center;
+}
+
+
+/**********PHONE LANDSCAPE*************/ 
+@media screen and (orientation: landscape) {
+  #hamburger {
+    padding: 0 0.2em 0.2em 0.2em;
+    font-size: 2em;
+  }
+  .topNav {
+    padding: 0;
+    flex-direction: row;
+  }
+  .topNav a {
+    padding: 0.5em;
+    font-size: 1.5em;
+  }
+  #navLogo {
+    width: 150px;
+  }
+}
+
+#section1 {
+  padding-top: 20%;
+}
+
+/**********TABLET*************/
+@media screen and (min-width: 750px) {
+  #navLogo {
+    width: 350px;
+  }
+  #hamburger {
+    font-size: 3em;
+  }
+  .topNav a {
+    font-size: 1.5em;
+  }
+}
+
+#firstperson {
+  padding: 5%;
+  margin-bottom: -5%;
+}
+
+/**********TABLET LANDSCAPE*************/
+@media screen and (min-width: 750px) and (orientation: landscape){
+}
+
+#section1 {
+  padding-top: 20%;
+  padding-bottom: 39%;
+}
+
+/**********DESKTOP*************/
+@media screen and (min-width: 1000px) {
+  nav {
+    justify-content: flex-end;
+  }
+  .topNav {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0.5em 0;
+    border: none;
+    font-size: 0.6em;
+    margin-right: 3%;
+  }
+  .topNav a {
+    width: auto;
+    color: #11120C;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+  #hamburger {
+    display: none;
+  }
+  #navLogo {
+    width: 200px;
+    position: fixed;
+    margin-left: 3%;
+  }
+  #header-cta {
+    padding-top: 20%;
+  }
+}
+
+.bannerquote {
+  font-size: 2em;
+  text-align: center;
+}
+
+#section1 {
+  background: url(img/mountain.jpg);
+  background-position: center center;
+  height: 50vh;
+  background-size: cover;
+  padding-top: 31%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 47%;
 }
