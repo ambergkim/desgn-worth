@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Say Hi!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Body font -->
@@ -27,11 +27,37 @@
         </div>
       </div>
     </nav>
-    <div id="main_contact">
-      <h1>Contact Us</h1>
-      <div id="contact_form"></div>
-    </div>
-    <script type="text/javascript" src="navigation.js"></script>
+    <section id="forms">
+      <div id="contactInfo">
+        <!-- <form id="contactForm" action="mailto:alicialycan@gmail.com" method="post" enctype="text/plain" > -->
+
+        <form id="contactForm" >
+
+          <fieldset>
+            <legend>We'd like to hear from you!</legend>
+            <label for="fName">First Name: </label><br/>
+            <input type="text" name="fName" required="required"/><br/>
+            <label for="lName">Last Name: </label><br/>
+            <input type="text" name="lName" required="required"/><br/>
+            <label for="email">Email: </label><br/>
+            <input type="text" name="email" required="required"/><br/>
+            <label for="phone">Phone: </label><br/>
+            <input type="text" name="phone" /><br/>
+            <label for="message">Message: </label><br/>
+            <input type="text" name="message"/>
+            <button type="submit" id='formButton' value="submit">Send to Desgn Worth</button>
+          </fieldset>
+        </form>
+      </div>
+      <div id='submitMessage'>
+        <p>
+          Thank you for contacting us! We look forward to reading your message and will reply back within 24 hours.
+        </p>
+        <p>Cheers!</p>
+        <p>The Desgn Worth Team</p>
+        </div>
+    </section>
     <script type="text/javascript" src="contact.js"></script>
+    <script type="text/javascript" src="navigation.js"></script>
   </body>
 </html>
