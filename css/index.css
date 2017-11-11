@@ -3,7 +3,7 @@
 }
 
 #tagline{
-  background-image: url(img/index-background.jpg);
+  background-image: url(../img/index-background.jpg);
   background-size: cover;
   padding: 30% 10%;
   text-align: center;
