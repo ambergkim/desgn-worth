@@ -15,10 +15,23 @@ function User(fName, lName, company, email, phone, sDate, eDate) {
 
 var basicFormEl = document.getElementById('basicForm');
 var today = new Date(), day = today.getDate(), month = today.getMonth() + 1, year = today.getFullYear();
+if (day < 10) {
+  var dayString = '0' + day.toString();
+  day = parseInt(dayString);
+}
 var todaysDate = document.getElementById('sDate');
 todaysDate.min = year + '-' + month + '-' + day;
-// var endDate = document.getElementById('eDate');
-// endDate.min;
+var endDate = document.getElementById('eDate');
+endDate.min = year + '-' + month + '-' + dateShift();
+function dateShift() {
+  today.setDate(today.getDate() + 1);
+  return today.getDate();
+}
+function dateExp() {
+  today.setDate(today.getDate() + 6);
+  day = today.getDate();
+  return day;
+}
 
 function submitBasicForm(event) {
   event.preventDefault();
@@ -150,6 +163,7 @@ function submitProjectInfo(event) {
   }
   projectTitle.textContent = firstLetterCapital(projectType);
   clientName.textContent = userInfo[0].fName + ' ' + userInfo[0].lName;
+  dateExp();
   validProp.textContent = month + '/' + day + '/' + year;
   timelineSpan.innerText = newProject.timeline + ' weeks';
   totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.';
