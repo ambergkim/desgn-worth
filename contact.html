@@ -4,12 +4,34 @@
     <meta charset="utf-8">
     <title>Say Hi!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Body font -->
+    <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
+    <!-- Heading font -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Rating system-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/design-worth-favicon.ico">
   </head>
   <body>
+    <nav>
+      <img id="navLogo" alt="desgn worth logo" src="img/desgn-worth-logo.png" />
+      <div id="mainTopNav">
+        <button type="button" class="icon" id="hamburger">&#9776;</button>
+        <div id="navLinks" class="topNav navHide">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="quote.html">Quote</a>
+            <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
     <div id="main_contact">
       <h1>Contact Us</h1>
       <div id="contact_form"></div>
-      <script type="text/javascript" src="contact.js></script>
     </div>
+    <script type="text/javascript" src="navigation.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
   </body>
 </html>
