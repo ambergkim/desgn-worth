@@ -33,6 +33,7 @@
   margin-left: 5%;
   margin-right: 5%;
   background-color: aquamarine;
+  font-size: 30px;
 }
 
 .bannerquote {
@@ -73,7 +74,15 @@ h1 {
 
 #secondperson {
   padding: 5%;
-  margin-bottom: -5%;
+  margin-bottom: 0%;
+}
+
+#testwords1 {
+  margin-top: 13%;
+}
+
+#testwords2 {
+  margin-top: 16%;
 }
 
 #footer {
@@ -81,7 +90,7 @@ h1 {
 }
 
 
-/**********PHONE LANDSCAPE*************/ 
+/**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   #hamburger {
     padding: 0 0.2em 0.2em 0.2em;
@@ -119,7 +128,7 @@ h1 {
 
 #firstperson {
   padding: 5%;
-  margin-bottom: -5%;
+  margin-bottom: 0%;
 }
 
 /**********TABLET LANDSCAPE*************/
@@ -181,4 +190,10 @@ h1 {
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 47%;
+}
+
+.testimonial {
+  flex-direction: row;
+  display: flex;
+}
 }
