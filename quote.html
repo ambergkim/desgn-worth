@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Desgn Worth: InvoQuote</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/quote.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/nav.css">
     <!-- Body font -->
     <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
     <!-- Heading font -->
@@ -19,7 +21,11 @@
       <nav>
         <img id="navLogo" alt="desgn worth logo" src="img/desgn-worth-logo.png" />
         <div id="mainTopNav">
-          <button type="button" class="icon" id="hamburger">&#9776;</button>
+          <button type="button" class="hamburger hamburger--spin icon" id="hamburger">
+            <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+          </button>
           <div id="navLinks" class="topNav navHide">
               <a href="index.html">Home</a>
               <a href="about.html">About Us</a>
@@ -29,7 +35,8 @@
         </div>
       </nav>
     </header>
-    <section id="intro">
+    <section id="intro" class="graySection">
+      <image id="iqLogo" alt="invoquote logo" src="img/invoquote-logo-dark.png" />
       <h1>How Much Should a Website Cost, Anyway?</h1>
       <p>Prices for websites vary quite a bit depending on what features you would like, but they do fall within a general range.</p>
       <h2>Basic custom-designed websites (5 pages): $5,000</h2>
@@ -49,21 +56,16 @@
       <li>Basic Website: 8 weeks</li>
       <li>eCommerce Website: 24 weeks</li>
     </section>
-    <section id="forms">
+    <section id="forms" class="tealSection">
       <div id="basicInfo">
         <form id="basicForm">
           <fieldset>
             <legend>Let's get to know you</legend>
-            <label for="fName">First Name: </label><br/>
-            <input type="text" name="fName" required="required"/><br/>
-            <label for="lName">Last Name: </label><br/>
-            <input type="text" name="lName" required="required"/><br/>
-            <label for="company">Company: </label><br/>
-            <input type="text" name="company"/><br/>
-            <label for="email">Email: </label><br/>
-            <input type="text" name="email" /><br/>
-            <label for="phone">Phone: </label><br/>
-            <input type="text" name="phone" /><br/>
+            <label for="fName">First Name: </label><input type="text" name="fName" placeholder="First Name" required="required"/><br/>
+            <label for="lName">Last Name: </label><input type="text" name="lName" placeholder="Last Name" required="required"/><br/>
+            <label for="company">Company: </label><input type="text" name="company" placeholder="Company"/><br/>
+            <label for="email">Email: </label><input type="text" name="email" placeholder="Email"/><br/>
+            <label for="phone">Phone: </label><input type="text" name="phone" placeholder="Phone Number"/><br/>
             <label for="sDate">Enter a start date: </label>
             <input type="date" name="sDate" min="" id="sDate"><br>
             <label for="eDate">Enter an end date: </label>
@@ -77,7 +79,7 @@
           <fieldset>
             <legend>What can we help you with?</legend>
             <label>Project Type:</label><br/>
-            <input type="radio" name="projectType" value="basic" id="basic" required><label for="basic">Basic 5 Page Website</label>
+            <input type="radio" name="projectType" value="basic" id="basic" required><label for="basic">Basic 5 Page Website</label><br />
             <input type="radio" name="projectType" value="eCommerce" id="projectType" required><label for="projectType">eCommerce Website (5 products)</label><br/>
             <label for="pages">Number of extra pages</label>
             <input type="number" name="pages" id="pages" required><br/>
@@ -89,7 +91,7 @@
         </form>
       </div>
     </section>
-    <section id="proposal">
+    <section id="proposal" class="goldSection">
       <div id="client-project">
         <h2>Project: <span id="project-title"></span></h2><br>
         <h3>Client: <span id="client-name"></span></h3>
