@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Desgn Worth: InvoQuote</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Body font -->
+    <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
+    <!-- Heading font -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Rating system-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/design-worth-favicon.ico">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img id="navLogo" alt="desgn worth logo" src="img/desgn-worth-logo.png" />
+        <div id="mainTopNav">
+          <button type="button" class="icon" id="hamburger">&#9776;</button>
+          <div id="navLinks" class="topNav navHide">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="quote.html">Quote</a>
+              <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="intro">
+      <h1>How Much Should a Website Cost, Anyway?</h1>
+      <p>Prices for websites vary quite a bit depending on what features you would like, but they do fall within a general range.</p>
+      <h2>Basic custom-designed websites (5 pages): $5,000</h2>
+        <p>This option is best for designing a simple site from scratch. Your custom wb design package will include a responsive design to fit  your site automatically for mobile and tablet.</p>
+      <h2>Complex eCommerce sites (10 pages + first 5 products): $15,000</h2>
+        <p>This option is best for small businesses and clients who sell a service or product and require custom functionality for an online store. If you would like a high-quality custom built site with eCommerce functionality then this is the package for you!</p>
+    <h2>Ready to get your Quote? Enter your details below and we'll give you an instant estimate.</h2>
+    <h2>Timeline:</h2>
+    <ul>
+      <li>Basic Website: 8 weeks</li>
+      <li>eCommerce Website: 24 weeks</li>
+    </section>
+    <section id="forms">
+      <div id="basicInfo">
+        <form id="basicForm">
+          <fieldset>
+            <legend>Let's get to know you</legend>
+            <label for="fName">First Name: </label><br/>
+            <input type="text" name="fName" required="required"/><br/>
+            <label for="lName">Last Name: </label><br/>
+            <input type="text" name="lName" required="required"/><br/>
+            <label for="company">Company: </label><br/>
+            <input type="text" name="company"/><br/>
+            <label for="email">Email: </label><br/>
+            <input type="text" name="email" /><br/>
+            <label for="phone">Phone: </label><br/>
+            <input type="text" name="phone" /><br/>
+            <label for="sDate">Enter a start date: </label>
+            <input type="date" name="sDate" min="2017-09-15" id="sDate"><br>
+            <label for="eDate">Enter an end date: </label>
+            <input type="date" name="eDate" min="2017-01-01"><br>
+            <button type="submit" name="submit" value="submit">Lets Go!</button>
+          </fieldset>
+        </form>
+      </div>
+      <div id="projectInfo">
+        <form action="" id="project">
+          <fieldset>
+            <legend>What can we help you with?</legend>
+            <label>Project Type:</label><br/>
+            <input type="radio" name="projectType" value="basic" id="basic" required><label for="basic">Basic 5 Page Website</label>
+            <input type="radio" name="projectType" value="eCommerce" id="projectType" required><label for="projectType">eCommerce Website (5 products)</label><br/>
+            <label for="pages">Number of extra pages</label>
+            <input type="number" name="pages" id="pages" required><br/>
+            <label for="products">Number of extra prodcuts</label>
+            <input type="products" name="products" id="products"><br/>
+            <input type="checkbox" name="rush" id="rush" value="rush"><label for="rush">Is this a rush order?</label><br/>
+            <button type="submit">Generate my quote</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section id="proposal">
+      <div id="about">
+      </div>
+      <div id="breakdown">
+
+        <h2>Strategy:</h2>
+        <ul>
+          <li>We receive your information and will schedule a follow up call to go over any questions about our service. At this time we will discuss your goals, site design, brand concerns, and responsive options.</li>
+          <li>We will request any brand work, images, copy, and inspirational examples of styles you like to begin our wireframing process.</li>
+          <li>Next, we will send over a site layout and request approval or revisions at this time.</li>
+          <li>Over the next few weeks we will work on building your site and submit a final draft for your review.</li>
+          <li>Once the final site review (includes up to 2 revisions) is completed, we will make any revisions.</li>
+          <li>Website is ready to go live, hooray!!</li>
+        </ul>
+        <h2>Timeline:</h2>
+        <ul>
+          <li>Basic Website: 8 weeks</li>
+          <li>eCommerce Website: 24 weeks</li>
+        </ul>
+        <h2>We Would Like You to Provide:</h2>
+        <ul>
+          <li>Web hosting, domain registration, SSI certificate, WHOIS Guard or similar subscription service</li>
+          <li>Website copy and images (with licenses)</li>
+          <li>Licenses or subscriptions for premium services per client request</li>
+        </ul>
+        <h1>Add Ons</h1>
+        <h2>Extra Pages:</h2>
+          <p>Additional pages cost $150 each (minimum of 5)</p>
+        <h2>Extra Products:</h2>
+          <p>Additional products cost $150 each (minimum of 5)</p>
+      </div>
+      <div id="nextSteps">
+      </div>
+    </section>
+    <footer>
+    </footer>
+    <script type="text/javascript" src="quote.js"></script>
+    <script type="text/javascript" src="navigation.js"></script>
+  </body>
+</html>
