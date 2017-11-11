@@ -107,6 +107,7 @@ function submitProjectInfo(event) {
   var pages = event.target.pages.value;
   var products = event.target.products.value;
   var rushOrder = event.target.rush.checked;
+  console.log('is rush job? ' + rushOrder);
 
   var newProject = new Project(projectType, pages, products, rushOrder);
   newProject.calcCost();
@@ -125,18 +126,25 @@ function submitProjectInfo(event) {
   }
   if (newProject.pages > 0) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Extra Pages: ' + newProject.pages + '. Cost: $' + newProject.pagesCost);
+    var baseNode = document.createTextNode('Extra Pages: ' + newProject.pages + '. Cost: $' + newProject.pagesCost.toLocaleString());
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   if (newProject.products > 0) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Extra Products: ' + newProject.products + '. Cost: $' + newProject.productsCost);
+    var baseNode = document.createTextNode('Extra Products: ' + newProject.products + '. Cost: $' + newProject.productsCost.toLocaleString());
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  if (newProject.rush === true) {
+    console.log('populate rush order: ' + newProject.rush);
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Rush Order adds an additional: $' + newProject.totalCost.toLocaleString());
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   timelineSpan.innerText = newProject.timeline + ' weeks';
-  totalCostSpan.innerText = '$' + newProject.totalCost + '.';
+  totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.';
 }
 
 // function displayBreakdown() {
