@@ -48,23 +48,28 @@ basicFormEl.addEventListener('submit', submitBasicForm);
 function Project(projectType, pages, products, rushOrder) {
   this.projectType = projectType;
   this.pages = parseInt(pages);
+  this.pagesCost = 0;
   this.products = parseInt(products);
+  this.productsCost = 0;
   this.rush = rushOrder;
   this.totalCost = 0;
   this.timeline = 0;
   this.calcCost = function() {
-    var pagesCost = 0;
-    var productsCost = 0;
+    if (this.pages > 0) {
+      this.pagesCost = (Math.ceil(this.pages / 5)) * 750;
+    }
+    if (this.products > 0) {
+      this.productsCost = (Math.ceil(this.products / 5)) * 750;
+      console.log('number of products: ' + this.products);
+      console.log('products extra cost: ' + this.productsCost);
+    }
     if (this.projectType === 'basic') {
       this.totalCost += 5000;
-      pagesCost = (Math.ceil(this.pages / 5)) * 750;
-      this.totalCost = this.totalCost + pagesCost;
+      this.totalCost = this.totalCost + this.pagesCost;
     }
     if (this.projectType === 'eCommerce') {
       this.totalCost += 15000;
-      pagesCost = (Math.ceil(this.pages / 5)) * 750;
-      productsCost = (Math.ceil(this.products / 5)) * 750;
-      this.totalCost = this.totalCost + pagesCost + productsCost;
+      this.totalCost = this.totalCost + this.pagesCost + this.productsCost;
     }
     if (this.rush === true) {
       this.totalCost = this.totalCost * 2;
@@ -91,6 +96,9 @@ function Project(projectType, pages, products, rushOrder) {
 }
 
 var projectInfo = document.getElementById('projectInfo');
+var timelineSpan = document.getElementById('timeline');
+var costBreakDownUl = document.getElementById('costBreakdown');
+var totalCostSpan = document.getElementById('totalCost');
 
 function submitProjectInfo(event) {
   event.preventDefault();
@@ -99,19 +107,42 @@ function submitProjectInfo(event) {
   var pages = event.target.pages.value;
   var products = event.target.products.value;
   var rushOrder = event.target.rush.checked;
-  console.log('rush value: ' + rushOrder);
 
   var newProject = new Project(projectType, pages, products, rushOrder);
   newProject.calcCost();
   newProject.calcTime();
 
-  console.log(newProject.timeline + ' weeks');
+  if (newProject.projectType === 'basic') {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Basic 5 Page Website Base: $5,000');
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  } else if (newProject.projectType === 'eCommerce') {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Basic eCommerce (10 Pages + first 5 products): $15,000');
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  if (newProject.pages > 0) {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Extra Pages: ' + newProject.pages + '. Cost: $' + newProject.pagesCost);
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  if (newProject.products > 0) {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Extra Products: ' + newProject.products + '. Cost: $' + newProject.productsCost);
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  timelineSpan.innerText = newProject.timeline + ' weeks';
+  totalCostSpan.innerText = '$' + newProject.totalCost + '.';
 }
 
-function displayBreakdown() {
-  var currentProject = projectQuote[0];
-
-}
+// function displayBreakdown() {
+//   var currentProject = projectQuote[0];
+//   var currentProjectTimeline = projectQuote.timeline;
+// }
 
 projectInfo.addEventListener('submit', submitProjectInfo);
 
@@ -120,7 +151,6 @@ function popProp () {
   var aboutEl = document.getElementById('about');
   var breakdownEl = document.getElementById('breakdown');
   var nextStepsEl = document.getElementById('nextSteps');
-
   // update text content of <p> to insert final cost value
   // cost = projectQuote[0].totalCost;
 }
