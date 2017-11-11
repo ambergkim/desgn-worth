@@ -88,7 +88,7 @@ nav {
   margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: teal;
+  background-color: aquamarine;
 }
 
 .bannerquote {
@@ -122,9 +122,13 @@ h1 {
 .bio {
   border: solid 1px black;
   margin: 5%;
-  padding: 5%;
+  padding: 3%;
   flex-basis: auto;
   font-size: 20px;
+}
+
+#secondperson {
+  padding: 5%;
 }
 
 #footer {
