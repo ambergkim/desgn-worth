@@ -100,6 +100,7 @@ function Project(projectType, pages, products, rushOrder) {
 var projectInfo = document.getElementById('projectInfo');
 var projectTitle = document.getElementById('project-title');
 var clientName = document.getElementById('client-name');
+var validProp = document.getElementById('valid');
 var timelineSpan = document.getElementById('timeline');
 var costBreakDownUl = document.getElementById('costBreakdown');
 var totalCostSpan = document.getElementById('totalCost');
@@ -149,6 +150,7 @@ function submitProjectInfo(event) {
   }
   projectTitle.textContent = firstLetterCapital(projectType);
   clientName.textContent = userInfo[0].fName + ' ' + userInfo[0].lName;
+  validProp.textContent = month + '/' + day + '/' + year;
   timelineSpan.innerText = newProject.timeline + ' weeks';
   totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.';
 }
