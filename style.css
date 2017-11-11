@@ -30,6 +30,7 @@
 
 #firstperson {
   padding: 5%;
+  margin-bottom: -5%;
 }
 
 .testimonial {
@@ -77,6 +78,7 @@ h1 {
 
 #secondperson {
   padding: 5%;
+  margin-bottom: -5%;
 }
 
 #footer {
