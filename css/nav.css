@@ -1,4 +1,8 @@
 /*NAVIGATION STYLING*/
+* {
+  font-size: 20px;
+}
+
 nav {
   background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.5);
