@@ -69,7 +69,7 @@ h1 {
 }
 
 .bio {
-  border: solid 1px black;
+  border: solid 2px black;
   margin: 5%;
   padding: 3%;
   flex-basis: auto;
