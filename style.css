@@ -3,54 +3,8 @@
   font-size: 20px;
 }
 
-/*NAVIGATION STYLING*/
-nav {
-  background-color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  padding-top: 1.5em;
-}
-
-.topNav {
-  display: flex;
-  font-family: 'Pathway Gothic One', sans-serif;
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: rgba(17, 18, 12);
-  background-color: rgba(17, 18, 12, 0.3);
-  padding: 0.5em 0;
-}
-
-.navHide {
-  display: none;
-}
-
-.topNav a {
-  font-size: 2em;
-  color: white;
-  padding: 1em;
-  width: 100%;
-}
-
-.topNav a:hover {
-  color: #efefef;
-}
-
-.topNav a:active {
-  color: #efefef;
-}
-
-#navlogo {
-  display: block;
+.navlogo {
   margin: 0 auto;
-  background: none;
 
 }
 
@@ -58,12 +12,6 @@ nav {
   display: flex;
   justify-content: center;
 }
-
-#hamburger {
-  font-size: 75px;
-}
-
-/*BODY*/
 
 #section1 {
   background: url(img/mountain.jpg);
