@@ -1,5 +1,12 @@
 # Team: Desgn Worth
 
+## Members:
+* Alicia Lycan
+* Amber Kim
+* Chris Lesesne
+* Devin Cunningham
+* Eric Cobb
+
 ## Project Topic
 Web app for freelancers & agencies
 
