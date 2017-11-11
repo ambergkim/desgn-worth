@@ -2,25 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Design Worth</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Desgn Worth</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/nav.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="style.css">
     <!-- Body font -->
-    <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
     <!-- Heading font -->
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <!-- Rating system-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/png" href="img/design-worth-favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" type="image/png" href="img/design-worth-favicon.ico">
   </head>
   <body>
-    <header id="header" class="navcontainer">
-        <img class="navlogo" src="img/desgn-worth-logo.png">
-      <ul class="navlinks">
-        <li><a href="">Home</a></li>
-        <li><a href=""><b>About</b></a></li>
-        <li><a href="">Quote</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
+    <header>
+      <nav>
+        <img id="navLogo" alt="desgn worth logo" src="img/desgn-worth-logo.png" />
+        <div id="mainTopNav">
+          <button type="button" class="icon" id="hamburger">&#9776;</button>
+          <div id="navLinks" class="topNav navHide">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="quote.html">Quote</a>
+              <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
     </header>
     <section id="section1">
       <h2 class="bannerquote">"The biggest mistake a small business can make is to think like a small business." - Postfilm Design</h2>
@@ -72,7 +80,6 @@
     <div id="footer">
       <p>&copy; Copyright Desgn Worth 2017</p>
     </div>
-    <script type="app.js"></script>
+    <script src="navigation.js" src="quote.js" src="contnact.js"></script>
   </body>
-  
 </html>
