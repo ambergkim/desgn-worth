@@ -1,3 +1,5 @@
+'use strict';
+
 var navButton = document.getElementById('hamburger');
 var navLinks = document.getElementById('navLinks');
 
