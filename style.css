@@ -3,54 +3,8 @@
   font-size: 20px;
 }
 
-/*NAVIGATION STYLING*/
-nav {
-  background-color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  padding-top: 1.5em;
-}
-
-.topNav {
-  display: flex;
-  font-family: 'Pathway Gothic One', sans-serif;
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: rgba(17, 18, 12);
-  background-color: rgba(17, 18, 12, 0.3);
-  padding: 0.5em 0;
-}
-
-.navHide {
-  display: none;
-}
-
-.topNav a {
-  font-size: 2em;
-  color: white;
-  padding: 1em;
-  width: 100%;
-}
-
-.topNav a:hover {
-  color: #efefef;
-}
-
-.topNav a:active {
-  color: #efefef;
-}
-
-#navlogo {
-  display: block;
+.navlogo {
   margin: 0 auto;
-  background: none;
 
 }
 
@@ -59,12 +13,6 @@ nav {
   justify-content: center;
 }
 
-#hamburger {
-  font-size: 75px;
-}
-
-/*BODY*/
-
 #section1 {
   background: url(img/mountain.jpg);
   height: 50vh;
@@ -72,6 +20,24 @@ nav {
   padding-top: 30%;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+#section2 {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#firstperson {
+  padding: 5%;
+  margin-bottom: -5%;
+}
+
+.testimonial {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: aquamarine;
 }
 
 .bannerquote {
@@ -96,15 +62,25 @@ h1 {
 }
 
 .container {
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .bio {
-  border: solid 1px black;
+  border: solid 2px black;
   margin: 5%;
-  padding: 5%;
+  padding: 3%;
   flex-basis: auto;
   font-size: 20px;
+}
+
+#secondperson {
+  padding: 5%;
+  margin-bottom: -5%;
+}
+
+#footer {
+  text-align: center;
 }

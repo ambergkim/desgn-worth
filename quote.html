@@ -3,9 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Desgn Worth: InvoQuote</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Body font -->
+    <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
+    <!-- Heading font -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Rating system-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/design-worth-favicon.ico">
   </head>
   <body>
     <header>
+      <nav>
+        <img id="navLogo" alt="desgn worth logo" src="img/desgn-worth-logo.png" />
+        <div id="mainTopNav">
+          <button type="button" class="icon" id="hamburger">&#9776;</button>
+          <div id="navLinks" class="topNav navHide">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="quote.html">Quote</a>
+              <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
     </header>
     <section id="intro">
       <h1>How Much Should a Website Cost, Anyway?</h1>
@@ -68,7 +90,12 @@
       </div>
     </section>
     <section id="proposal">
+      <div id="client-project">
+        <h2>Project: <span id="project-title"></span></h2><br>
+        <h3>Client: <span id="client-name"></span></h3>
+      </div>
       <div id="about">
+        <p>Desgn Worth truly values you as a client and we are committed to delivering on-time, quality results. It is our goal as a team to ensure that you are completely satisfied with your project and that it fulfills the needs of your business. We are continually driven by the idea that our work is "for freelancers, by freelancers" and look forward to building your project!</p>
       </div>
       <div id="breakdown">
         <h2>Strategy:</h2>
@@ -96,8 +123,9 @@
       </div>
     </section>
     <footer>
-      <p>&copy; Copyright 2017</p>
+      <p>&copy; Desgn Worth 2017</p>
     </footer>
     <script type="text/javascript" src="quote.js"></script>
+    <script type="text/javascript" src="navigation.js"></script>
   </body>
 </html>

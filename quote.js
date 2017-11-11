@@ -96,6 +96,8 @@ function Project(projectType, pages, products, rushOrder) {
 }
 
 var projectInfo = document.getElementById('projectInfo');
+var projectTitle = document.getElementById('project-title');
+var clientName = document.getElementById('client-name');
 var timelineSpan = document.getElementById('timeline');
 var costBreakDownUl = document.getElementById('costBreakdown');
 var totalCostSpan = document.getElementById('totalCost');
@@ -143,6 +145,8 @@ function submitProjectInfo(event) {
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
+  projectTitle.textContent = firstLetterCapital(projectType);
+  clientName.textContent = userInfo[0].fName + ' ' + userInfo[0].lName;
   timelineSpan.innerText = newProject.timeline + ' weeks';
   totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.';
 }
@@ -154,11 +158,11 @@ function submitProjectInfo(event) {
 
 projectInfo.addEventListener('submit', submitProjectInfo);
 
-function popProp () {
-  var proposalEl = document.getElementById('proposal');
-  var aboutEl = document.getElementById('about');
-  var breakdownEl = document.getElementById('breakdown');
-  var nextStepsEl = document.getElementById('nextSteps');
-  // update text content of <p> to insert final cost value
-  // cost = projectQuote[0].totalCost;
+function firstLetterCapital (word) {
+  var wordArray = word.split(' ');
+  var newWordArray = [];
+  for (var i = 0; i < wordArray.length; i++) {
+    newWordArray.push(wordArray[i].charAt(0).toUpperCase() + wordArray[i].slice(1));
+  }
+  return newWordArray.join(' ');
 }
