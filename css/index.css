@@ -15,7 +15,7 @@
 }
 
 .cta{
-  border: solid 2px #53b0bd;
+  border: none;
   padding: 5%;
   background: #53b0bd;
   font-family: 'Ubuntu', sans-serif;
@@ -40,4 +40,71 @@
 
 footer{
   text-align: center;
+}
+
+/**********PHONE LANDSCAPE*************/
+@media screen and (orientation: landscape) {
+
+}
+/**********TABLET*************/
+@media screen and (min-width: 750px) {
+
+}
+
+/**********TABLET LANDSCAPE*************/
+@media screen and (min-width: 750px) and (orientation: landscape){
+}
+
+/**********DESKTOP*************/
+@media screen and (min-width: 1000px) {
+  #tagline{
+    background-position: center center;
+    padding: 10% 10%;
+    text-align: center;
+  }
+
+  #taglinetext{
+    color: white;
+    font-size: 250%;
+    text-shadow: 2px 2px grey;
+    font-weight: bold;
+    padding-top: 10%;
+  }
+
+  .cta{
+    border: none;
+    padding: 2%;
+    background: #53b0bd;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+  }
+
+  .cta:hover{
+    color: white;
+    background: #12646f;
+  }
+
+  .lastcta{
+    padding-top: 2%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+  }
+
+  .bodycopy{
+    padding: 5% 10%;
+  }
+
+  .test{
+    display: flex;
+    align-items: center;
+    padding: 5% 10%;
+  }
+
+  .testText{
+    padding-left: 5%;
+  }
+
+
 }
