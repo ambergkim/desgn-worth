@@ -14,9 +14,11 @@ function User(fName, lName, company, email, phone, sDate, eDate) {
 }
 
 var basicFormEl = document.getElementById('basicForm');
-// var today = new Date(), day = today.getDate(), month = today.getMonth(), year = today.getFullYear();
-// var todaysDate = document.getElementById('sDate');
-// todaysDate.min = month + '-' + '0' + day + '-' + year;
+var today = new Date(), day = today.getDate(), month = today.getMonth() + 1, year = today.getFullYear();
+var todaysDate = document.getElementById('sDate');
+todaysDate.min = year + '-' + month + '-' + day;
+// var endDate = document.getElementById('eDate');
+// endDate.min;
 
 function submitBasicForm(event) {
   event.preventDefault();
