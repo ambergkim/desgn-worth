@@ -16,8 +16,19 @@
         If 5 - 6 weeks - 2x multiplier
         If 3 -4 weeks - 4x multiplier
         If 1 -2 weeks - 8x multiplier
-        **Ecommerce**:
+        **eCommerce**:
         If 24+ weeks - no multiplier
         If 14 - 18 weeks - 2x multiplier
         If 10 - 12 weeks - 4x multiplier
         If  6 - 8 weeks - 8x multiplier
+
+### 11.11.17
+* Stretch Goal To-Do's:
+  * make forms appear individually (dynamic/responsive form submittal)
+  * make proposal look professional & formal
+  * identical footers
+  * spacing of Strategy subsection in quote.html
+  * update responsiveness for About Page (add columns to bio); add team photo; edit testimonials
+  * adding charts
+  * marketing packages
+  * multiplier function to JavaScript for shorter/longer timeframes
