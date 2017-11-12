@@ -245,7 +245,7 @@ footer{
     padding: 2%;
     background: #53b0bd;
     font-family: 'Ubuntu', sans-serif;
-    margin: 0 auto;
+    margin: 2% auto;
     /*transition-property: background;*/
     transition-property: all;
     transition-duration: .25s;
@@ -300,7 +300,10 @@ footer{
   }
 
 footer{
-  font-size: .5em;
+  text-align: center;
+  background-color: #ececec;
+  padding: 1.5em;
+  font-size: 1em;
 }
 
 #footerLogo {
