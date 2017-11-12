@@ -34,6 +34,7 @@ ul {
 
 li {
   font-size: 30px;
+  font-family: 'Cabin', sans-serif;
 }
 
 button {
@@ -114,6 +115,22 @@ input[type="radio"], input[type="checkbox"] {
   transform: scale(3);
 }
 
+button {
+  background-color: #53b0bd;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 0.5em;
+  width: 95%;
+}
+
+#project-title, #client-name, #timeline, #totalCost {
+  font-size: 34px;
+}
+
+#prop-title-div, #cost-title {
+  text-align: center;
+}
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   * {
@@ -136,7 +153,10 @@ input[type="radio"], input[type="checkbox"] {
   font-size: 16px;
 }
 p {
-  font-size: 1em;
+  font-size: 1.2em;
+}
+h1{
+  font-size: 2em;
 }
 h2 {
   font-size: 2em;
