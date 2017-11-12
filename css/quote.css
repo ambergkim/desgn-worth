@@ -36,6 +36,9 @@ li {
   font-size: 30px;
 }
 
+footer {
+  text-align: center;
+}
 .graySection {
   background: #fbfbfb;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ececec, #fbfbfb);  /* Chrome 10-25, Safari 5.1-6 */
@@ -104,6 +107,10 @@ button {
   font-size: 1.5em;
   padding: 0.5em;
   width: 95%;
+}
+
+#project-title, #client-name, #timeline, #totalCost {
+  font-size: 34px;
 }
 
 /**********PHONE LANDSCAPE*************/
