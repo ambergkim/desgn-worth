@@ -81,7 +81,7 @@ h1 {
 }
 
 
-/**********PHONE LANDSCAPE*************/ 
+/**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   #hamburger {
     padding: 0 0.2em 0.2em 0.2em;
@@ -172,7 +172,7 @@ h1 {
   text-align: center;
 }
 
-#section1 {
+#contactBottom {
   background: url(img/mountain.jpg);
   background-position: center center;
   height: 50vh;
