@@ -147,4 +147,9 @@ h2 {
   margin: 0 auto;
 }
 
+input[type="radio"], input[type="checkbox"] {
+  width: 50px;
+  transform: scale(1.5);
+}
+
 }
