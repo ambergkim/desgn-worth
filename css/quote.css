@@ -137,7 +137,6 @@ button {
   text-align: center;
   background-color: #ececec;
   padding: 1.5em;
-  margin-top: 2em;
   font-size: 1em;
 }
 
@@ -177,6 +176,9 @@ h2 {
   font-size: 2em;
   text-transform: uppercase;
   margin: 0;
+}
+li{
+  font-size: 1.2em;
 }
 form {
   width: 50%;
