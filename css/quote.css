@@ -115,7 +115,7 @@ button {
   font-size: 34px;
 }
 
-#prop-title-div{
+#prop-title-div, #cost-title {
   text-align: center;
 }
 
