@@ -17,6 +17,7 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
   text-transform: uppercase;
   font-size: 3.5em;
+  color: #12646f;
 }
 
 h2 {
@@ -107,7 +108,9 @@ button {
 
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
-
+  * {
+    font-size: 20px;
+  }
 }
 /**********TABLET*************/
 @media screen and (min-width: 750px) {
@@ -115,10 +118,33 @@ button {
 }
 
 /**********TABLET LANDSCAPE*************/
-@media screen and (min-width: 750px) and (orientation: landscape){
+@media screen and (min-width: 1000px) and (orientation: landscape){
 }
 
 /**********DESKTOP*************/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
+/*Intro Section*/
+* {
+  font-size: 16px;
+}
+p {
+  font-size: 1em;
+}
+h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  flex-grow: 1;
+  padding: 5%;
+}
+#iqLogo {
+  margin: 0 auto;
+}
 
 }
