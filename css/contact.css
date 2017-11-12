@@ -1,3 +1,91 @@
+p {
+  font-size: 14px;
+  font-style: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3 {
+  font-style: 'Cabin', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #12646f;
+  margin: 20% 5% 3% 5%;
+  padding-left: 1%;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 44px;
+  color: #fbfbfb;
+}
+
+h3  {
+  text-align: center;
+}
+
+form {
+  margin: 30% 5% 0 5%;
+  padding: 2% 55% 1% 2%;
+  font-style: 'Ubuntu', sans-serif;
+}
+
+#formButton {
+  border: none;
+  padding: 5%;
+  background: #ececec;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 2% 2% 2% 2%;
+  margin: 5% 1% 1% 2%;
+}
+
+#formButton:hover {
+  color: white;
+  background: #12646f;
+}
+
+#forms {
+  padding-bottom: 0;
+  width: 100%;
+}
+
 #submitMessage {
   visibility: hidden;
+  background-color: #53b0bd;
+}
+
+#coffee {
+  background-color: #53b0bd;
+  margin: auto;
+  padding: 5% 10% 5% 10%;
+}
+
+/**********PHONE LANDSCAPE*************/
+@media screen and (orientation: landscape) {
+
+}
+/**********TABLET*************/
+@media screen and (min-width: 750px) {
+
+}
+/**********TABLET LANDSCAPE*************/
+@media screen and (min-width: 750px) and (orientation: landscape){
+}
+
+/**********DESKTOP*************/
+@media screen and (min-width: 1000px) {
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .column {
+    flex-grow: 1;
+  }
+
+  #contactForm {
+    margin: 0;
+  }
 }
