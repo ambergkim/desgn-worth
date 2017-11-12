@@ -62,6 +62,12 @@
 
 footer{
   text-align: center;
+  font-size: .5em;
+}
+
+#footerLogo {
+    width: 42%;
+    height: 15%;
 }
 
 /**********PHONE LANDSCAPE*************/
@@ -83,8 +89,14 @@ footer{
     }
 
     footer{
+      font-size: .5em;
       padding: 0;
       margin: 0;
+    }
+
+    #footerLogo {
+        width: 28%;
+        height: 15%;
     }
 
 }
@@ -185,6 +197,12 @@ footer{
     padding-left: 5%;
   }
 
+  #footerLogo {
+      margin-top: 2%;
+      width: 25%;
+      height: 15%;
+  }
+
   #team{
       background-image: url(../img/group.png);
       padding: 15% 10%;
@@ -281,5 +299,14 @@ footer{
     text-shadow: 2px 2px black;
   }
 
+footer{
+  font-size: .5em;
+}
+
+#footerLogo {
+    margin-top: 2%;
+    width: 10%;
+    height: 15%;
+}
 
 }
