@@ -34,6 +34,8 @@ ul {
 
 li {
   font-size: 30px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 30px;
 }
 
 footer {
@@ -113,6 +115,10 @@ button {
   font-size: 34px;
 }
 
+#prop-title-div{
+  text-align: center;
+}
+
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   * {
@@ -135,7 +141,7 @@ button {
   font-size: 16px;
 }
 p {
-  font-size: 1em;
+  font-size: 1.6em;
 }
 h2 {
   font-size: 2em;
