@@ -37,9 +37,23 @@ li {
   font-family: 'Cabin', sans-serif;
 }
 
-footer {
-  text-align: center;
+button {
+  background-color: #53b0bd;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 0.5em;
+  width: 95%;
+  border: solid 3px #12646f;
+  transition: all 0.3s ease 0s;
 }
+
+button:hover {
+  border: solid 3px #52b0bd;
+  background-color: #12646f;
+  color: #ececec;
+}
+
 .graySection {
   background: #fbfbfb;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ececec, #fbfbfb);  /* Chrome 10-25, Safari 5.1-6 */
@@ -117,7 +131,6 @@ button {
 #prop-title-div, #cost-title {
   text-align: center;
 }
-
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   * {
@@ -150,8 +163,16 @@ h2 {
   text-transform: uppercase;
   margin: 0;
 }
-li{
-  font-size: 1.2em;
+form {
+  width: 50%;
+  margin: auto;
+}
+label {
+  font-size: 1em;
+}
+input {
+  padding: 0.25em;
+  font-size: 1em;
 }
 .row {
   display: flex;
@@ -164,10 +185,9 @@ li{
 #iqLogo {
   margin: 0 auto;
 }
-
 input[type="radio"], input[type="checkbox"] {
-  width: 50px;
-  transform: scale(1.5);
+  width: 20px;
+  transform: scale(1);
 }
 
 }
