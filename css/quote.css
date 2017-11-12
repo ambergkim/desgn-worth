@@ -35,7 +35,6 @@ ul {
 li {
   font-size: 30px;
   font-family: 'Cabin', sans-serif;
-  font-size: 30px;
 }
 
 footer {
@@ -141,12 +140,18 @@ button {
   font-size: 16px;
 }
 p {
-  font-size: 1.6em;
+  font-size: 1.2em;
+}
+h1{
+  font-size: 2em;
 }
 h2 {
   font-size: 2em;
   text-transform: uppercase;
   margin: 0;
+}
+li{
+  font-size: 1.2em;
 }
 .row {
   display: flex;
