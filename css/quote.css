@@ -35,12 +35,25 @@ ul {
 li {
   font-size: 30px;
   font-family: 'Cabin', sans-serif;
-  font-size: 30px;
 }
 
-footer {
-  text-align: center;
+button {
+  background-color: #53b0bd;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 0.5em;
+  width: 95%;
+  border: solid 3px #12646f;
+  transition: all 0.3s ease 0s;
 }
+
+button:hover {
+  border: solid 3px #52b0bd;
+  background-color: #12646f;
+  color: #ececec;
+}
+
 .graySection {
   background: #fbfbfb;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ececec, #fbfbfb);  /* Chrome 10-25, Safari 5.1-6 */
@@ -57,6 +70,8 @@ footer {
   background: #fbfbfb;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #c2b394, #fbfbfb);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #c2b394, #fbfbfb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  line-height: 2;
 }
 
 /*INTRO SECTION*/
@@ -111,12 +126,38 @@ button {
   width: 95%;
 }
 
+.strategy-ul, .about-div, .provide-list, .costBreakdown {
+  text-align: left;
+}
+#strategy-ul, #provide-list, #about-div, #costBreakdown {
+  width: 75%;
+  margin: 0 auto;
+}
+
 #project-title, #client-name, #timeline, #totalCost {
   font-size: 34px;
 }
 
-#prop-title-div{
+#name-italic {
+  font-style: italic;
+  font-size: 1em;
+}
+
+#cost-title {
+  color: #000;
+}
+
+/* FOOTER SECTION*/
+#footer {
   text-align: center;
+  background-color: #ececec;
+  padding: 1.5em;
+  font-size: 1em;
+}
+
+#footerLogo {
+  width: 15%;
+  height: 15%;
 }
 
 /**********PHONE LANDSCAPE*************/
@@ -141,12 +182,29 @@ button {
   font-size: 16px;
 }
 p {
-  font-size: 1.6em;
+  font-size: 1.2em;
+}
+h1{
+  font-size: 2em;
 }
 h2 {
   font-size: 2em;
   text-transform: uppercase;
   margin: 0;
+}
+li{
+  font-size: 1.2em;
+}
+form {
+  width: 50%;
+  margin: auto;
+}
+label {
+  font-size: 1em;
+}
+input {
+  padding: 0.25em;
+  font-size: 1em;
 }
 .row {
   display: flex;
@@ -159,10 +217,9 @@ h2 {
 #iqLogo {
   margin: 0 auto;
 }
-
 input[type="radio"], input[type="checkbox"] {
-  width: 50px;
-  transform: scale(1.5);
+  width: 20px;
+  transform: scale(1);
 }
 
 }
