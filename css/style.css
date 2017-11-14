@@ -14,7 +14,7 @@
 }
 
 #section1 {
-  background: url(img/mountain.jpg);
+  background: url(../img/mountain.jpg);
   height: 50vh;
   background-size: cover;
   padding-top: 30%;
@@ -192,7 +192,7 @@ h1 {
 }
 
 #contactBottom {
-  background: url(img/mountain.jpg);
+  background: url(../img/mountain.jpg);
   background-position: center center;
   height: 50vh;
   background-size: cover;
