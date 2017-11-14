@@ -59,7 +59,7 @@ function submitBasicForm(event) {
 
 basicFormEl.addEventListener('submit', submitBasicForm);
 
-function Project(projectType, pages, products, courses, rushOrder) {
+function Project(projectType, pages, products, courses, rushOrder, marketing, reviewManagement, websiteMaintenance) {
   this.projectType = projectType;
   this.pages = parseInt(pages);
   this.pagesCost = 0;
@@ -70,6 +70,9 @@ function Project(projectType, pages, products, courses, rushOrder) {
   this.rush = rushOrder;
   this.totalCost = 0;
   this.timeline = 0;
+  this.marketing = marketing;
+  this.reviewManagement = reviewManagement;
+  this.websiteMaintenance = websiteMaintenance;
   this.calcCost = function() {
     if (this.pages > 0) {
       this.pagesCost = (Math.ceil(this.pages / 5)) * 750;
@@ -141,8 +144,11 @@ function submitProjectInfo(event) {
   var products = event.target.products.value;
   var courses = event.target.courses.value;
   var rushOrder = event.target.rush.checked;
+  var marketing = event.target.marketing.checked;
+  var reviewManagement = event.target.reviewManagement.checked;
+  var websiteMaintenance = event.target.websiteMaintenance.checked;
 
-  var newProject = new Project(projectType, pages, products, courses, rushOrder);
+  var newProject = new Project(projectType, pages, products, courses, rushOrder, marketing, reviewManagement, websiteMaintenance);
   newProject.calcCost();
   newProject.calcTime();
 
@@ -188,6 +194,24 @@ function submitProjectInfo(event) {
   if (newProject.rush === true) {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Rush Order adds an additional: $' + newProject.totalCost.toLocaleString());
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  if (newProject.marketing === true) {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Thank you for your interest in Markting, we will have our marketing specialist sitting in our your follow-up call.');
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  if (newProject.reviewManagement === true) {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation, we are excited about the possibility of helping you get more "5-Star" reviews online.');
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
+  if (newProject.websiteMaintenance === true) {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('We have many different levels of Website Maintenance, in our follow-up call we will go over the different levels and help you pick out the right level.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
