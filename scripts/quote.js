@@ -44,7 +44,6 @@ function submitBasicForm(event) {
   var endDate = event.target.eDate.value;
 
   new User (firstName, lastName, company, email, phone, startDate, endDate);
-  console.log(userInfo);
 
   event.target.fName.value = null;
   event.target.lName.value = null;
@@ -60,12 +59,14 @@ function submitBasicForm(event) {
 
 basicFormEl.addEventListener('submit', submitBasicForm);
 
-function Project(projectType, pages, products, rushOrder) {
+function Project(projectType, pages, products, courses, rushOrder) {
   this.projectType = projectType;
   this.pages = parseInt(pages);
   this.pagesCost = 0;
   this.products = parseInt(products);
   this.productsCost = 0;
+  this.courses = parseInt(courses);
+  this.courseCost = 0;
   this.rush = rushOrder;
   this.totalCost = 0;
   this.timeline = 0;
@@ -75,16 +76,18 @@ function Project(projectType, pages, products, rushOrder) {
     }
     if (this.products > 0) {
       this.productsCost = (Math.ceil(this.products / 5)) * 750;
-      console.log('number of products: ' + this.products);
-      console.log('products extra cost: ' + this.productsCost);
     }
     if (this.projectType === 'basic') {
       this.totalCost += 5000;
       this.totalCost = this.totalCost + this.pagesCost;
     }
-    if (this.projectType === 'eCommerce') {
+    if (this.projectType === 'eCommerce' || this.projectType === 'membership' || this.projectType === 'onlineCourse') {
       this.totalCost += 15000;
       this.totalCost = this.totalCost + this.pagesCost + this.productsCost;
+    }
+    if(this.courses > 0) {
+      this.courseCost = 10000 * this.courses;
+      this.totalCost = this.totalCost + this.courseCost;
     }
     if (this.rush === true) {
       this.totalCost = this.totalCost * 2;
@@ -96,9 +99,21 @@ function Project(projectType, pages, products, rushOrder) {
       this.timeline += (Math.ceil(this.pages / 5)) * 2;
     }
     if (this.projectType === 'eCommerce') {
-      if (this.products) {
+      if (this.products > 0) {
         this.timeline = 24;
         this.timeline += (Math.ceil(this.products / 5)) * 2;
+      } else {
+        this.timeline = 24;
+      }
+    }
+    if (this.projectType === 'membership'){
+      this.timeline = 24;
+      this.timeline += (Math.ceil(this.pages / 5)) * 2;
+    }
+    if (this.projectType === 'onlineCourse') {
+      if (this.courses > 0) {
+        this.timeline = 24;
+        this.timeline = this.timeline * this.courses;
       } else {
         this.timeline = 24;
       }
@@ -124,10 +139,10 @@ function submitProjectInfo(event) {
   var projectType = event.target.projectType.value;
   var pages = event.target.pages.value;
   var products = event.target.products.value;
+  var courses = event.target.courses.value;
   var rushOrder = event.target.rush.checked;
-  console.log('is rush job? ' + rushOrder);
 
-  var newProject = new Project(projectType, pages, products, rushOrder);
+  var newProject = new Project(projectType, pages, products, courses, rushOrder);
   newProject.calcCost();
   newProject.calcTime();
 
@@ -139,6 +154,16 @@ function submitProjectInfo(event) {
   } else if (newProject.projectType === 'eCommerce') {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Basic eCommerce (10 Pages + first 5 products): $15,000');
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  } else if(newProject.projectType === 'membership') {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }else if(newProject.projectType === 'onlineCourse') {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
@@ -154,8 +179,13 @@ function submitProjectInfo(event) {
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
+  if (newProject.courses > 0) {
+    var baseLi = document.createElement('li');
+    var baseNode = document.createTextNode('Extra Courses: ' + newProject.courses + '. Cost: $' + newProject.courseCost.toLocaleString());
+    baseLi.appendChild(baseNode);
+    costBreakDownUl.appendChild(baseLi);
+  }
   if (newProject.rush === true) {
-    console.log('populate rush order: ' + newProject.rush);
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Rush Order adds an additional: $' + newProject.totalCost.toLocaleString());
     baseLi.appendChild(baseNode);
@@ -166,13 +196,8 @@ function submitProjectInfo(event) {
   dateExp();
   validProp.textContent = month + '/' + day + '/' + year;
   timelineSpan.innerText = newProject.timeline + ' weeks';
-  totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.';
+  totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.00';
 }
-
-// function displayBreakdown() {
-//   var currentProject = projectQuote[0];
-//   var currentProjectTimeline = projectQuote.timeline;
-// }
 
 projectInfo.addEventListener('submit', submitProjectInfo);
 
