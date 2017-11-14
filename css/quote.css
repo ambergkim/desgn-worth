@@ -134,7 +134,7 @@ button {
   margin: 0 auto;
 }
 
-#project-title, #client-name, #timeline, #totalCost {
+#project-title, #client-name, #timeline, #reqTimeline, #totalCost {
   font-size: 34px;
 }
 
