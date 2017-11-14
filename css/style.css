@@ -12,6 +12,12 @@
   justify-content: center;
 }
 
+#worth-style {
+  font-family: Abel;
+  font-size: 1em;
+  font-style: italic;
+}
+
 #section1 {
   background: url(../img/mountain.jpg);
   height: 50vh;
