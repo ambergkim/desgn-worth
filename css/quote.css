@@ -136,6 +136,7 @@ button {
 #prop-letterhead {
   margin-top: 3%;
   margin-bottom: 3%;
+  width: 50%;
 }
 
 #teamPortrait {
@@ -183,6 +184,9 @@ button {
   #iqLogo {
     margin-top: 20%;
     margin-bottom: 0;
+  }
+  #prop-letterhead {
+    width: 25%;
   }
 }
 /**********TABLET*************/
@@ -237,6 +241,9 @@ input {
 #iqLogo {
   margin: 0 auto;
   width: 25%;
+}
+#prop-letterhead {
+  width: 15%;
 }
 input[type="radio"], input[type="checkbox"] {
   width: 20px;
