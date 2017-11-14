@@ -1,5 +1,4 @@
 /*GENERAL SETTINGS*/
-
 * {
   font-size: 30px;
 }
@@ -8,9 +7,9 @@ section {
   padding: 10% 10% 10% 10%;
 }
 
-p {
+p, li {
   font-family: 'Cabin', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 h1 {
@@ -18,23 +17,21 @@ h1 {
   text-transform: uppercase;
   font-size: 3.5em;
   color: #12646f;
+  margin-top: 15%;
+  margin-bottom: 0;
 }
 
 h2 {
   font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
   margin-top: 2.5em;
+  margin-bottom: 3%;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
-}
-
-li {
-  font-size: 30px;
-  font-family: 'Cabin', sans-serif;
 }
 
 button {
@@ -52,6 +49,10 @@ button:hover {
   border: solid 3px #52b0bd;
   background-color: #12646f;
   color: #ececec;
+}
+
+.textIndent {
+ text-indent: 10%;
 }
 
 .graySection {
@@ -81,9 +82,9 @@ button:hover {
 }
 
 #iqLogo {
-  margin: 20% auto 0;
-  width: 25%;
-  height: 25%;
+  margin: 30% auto 0;
+  width: 50%;
+  height: 50%;
 }
 
 /*FORMS INFO SECTION*/
@@ -128,14 +129,29 @@ button {
 
 .strategy-ul, .about-div, .provide-list, .costBreakdown {
   text-align: left;
+  list-style: square;
+  list-style-position: inside;
 }
+
+#prop-letterhead {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 50%;
+}
+
+#teamPortrait {
+  width: 100%;
+  border: solid 3px #12646f;
+  box-shadow: 10px 10px 5px #888888;
+}
+
 #strategy-ul, #provide-list, #about-div, #costBreakdown {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 }
 
 #project-title, #client-name, #timeline, #reqTimeline, #totalCost {
-  font-size: 34px;
+  font-size: 1em;
 }
 
 #name-italic {
@@ -165,6 +181,13 @@ button {
   * {
     font-size: 20px;
   }
+  #iqLogo {
+    margin-top: 20%;
+    margin-bottom: 0;
+  }
+  #prop-letterhead {
+    width: 25%;
+  }
 }
 /**********TABLET*************/
 @media screen and (min-width: 750px) {
@@ -186,11 +209,12 @@ p {
 }
 h1{
   font-size: 2em;
+  margin-top: 8%;
 }
 h2 {
   font-size: 2em;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 3% 0;
 }
 li{
   font-size: 1.2em;
@@ -216,6 +240,10 @@ input {
 }
 #iqLogo {
   margin: 0 auto;
+  width: 25%;
+}
+#prop-letterhead {
+  width: 15%;
 }
 input[type="radio"], input[type="checkbox"] {
   width: 20px;

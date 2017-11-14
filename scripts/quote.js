@@ -223,9 +223,13 @@ function submitProjectInfo(event) {
   dateExp();
   validProp.textContent = month + '/' + day + '/' + year;
   timelineSpan.innerText = newProject.timeline + ' weeks';
-  reqTimelineSpan.innerText = rushOrder + ' weeks';
+  if (newProject.rush > 0) {
+    reqTimelineSpan.innerText = rushOrder + ' weeks';
+  } else {
+    reqTimelineSpan.innerText = 'n/a';
+  }
   if (newProject.rushCost > newProject.totalCost) {
-        totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
   } else {
     totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
   }
