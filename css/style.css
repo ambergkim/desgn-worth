@@ -14,7 +14,7 @@
 }
 
 #section1 {
-  background: url(img/mountain.jpg);
+  background: url(../img/mountain.jpg);
   height: 50vh;
   background-size: cover;
   padding-top: 30%;
