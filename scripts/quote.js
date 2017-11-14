@@ -67,8 +67,9 @@ function Project(projectType, pages, products, courses, rushOrder, marketing, re
   this.productsCost = 0;
   this.courses = parseInt(courses);
   this.courseCost = 0;
-  this.rush = rushOrder;
+  this.rush = parseInt(rushOrder);
   this.totalCost = 0;
+  this.rushCost = 0;
   this.timeline = 0;
   this.marketing = marketing;
   this.reviewManagement = reviewManagement;
@@ -92,9 +93,9 @@ function Project(projectType, pages, products, courses, rushOrder, marketing, re
       this.courseCost = 10000 * this.courses;
       this.totalCost = this.totalCost + this.courseCost;
     }
-    if (this.rush === true) {
-      this.totalCost = this.totalCost * 2;
-    }
+    if (this.rush < this.timeline) {
+       this.rushCost = (this.timeline / this.rush) * this.totalCost;
+     }
   };
   this.calcTime = function() {
     if (this.projectType === 'basic') {
@@ -135,6 +136,7 @@ var validProp = document.getElementById('valid');
 var timelineSpan = document.getElementById('timeline');
 var costBreakDownUl = document.getElementById('costBreakdown');
 var totalCostSpan = document.getElementById('totalCost');
+var reqTimelineSpan = document.getElementById('reqTimeline');
 
 function submitProjectInfo(event) {
   event.preventDefault();
@@ -143,14 +145,14 @@ function submitProjectInfo(event) {
   var pages = event.target.pages.value;
   var products = event.target.products.value;
   var courses = event.target.courses.value;
-  var rushOrder = event.target.rush.checked;
+  var rushOrder = event.target.rush.value;
   var marketing = event.target.marketing.checked;
   var reviewManagement = event.target.reviewManagement.checked;
   var websiteMaintenance = event.target.websiteMaintenance.checked;
 
   var newProject = new Project(projectType, pages, products, courses, rushOrder, marketing, reviewManagement, websiteMaintenance);
-  newProject.calcCost();
   newProject.calcTime();
+  newProject.calcCost();
 
   if (newProject.projectType === 'basic') {
     var baseLi = document.createElement('li');
@@ -191,9 +193,10 @@ function submitProjectInfo(event) {
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
-  if (newProject.rush === true) {
+  if (newProject.rush > 0) {
+    var additionalCost = newProject.rushCost - newProject.totalCost;
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Rush Order adds an additional: $' + newProject.totalCost.toLocaleString());
+    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
@@ -220,7 +223,12 @@ function submitProjectInfo(event) {
   dateExp();
   validProp.textContent = month + '/' + day + '/' + year;
   timelineSpan.innerText = newProject.timeline + ' weeks';
-  totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString() + '.00';
+  reqTimelineSpan.innerText = rushOrder + ' weeks';
+  if (newProject.rushCost > newProject.totalCost) {
+        totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
+  } else {
+    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
+  }
 }
 
 projectInfo.addEventListener('submit', submitProjectInfo);
