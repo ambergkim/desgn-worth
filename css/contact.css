@@ -10,8 +10,8 @@ h1, h2, h3 {
 h1 {
   text-align: center;
   color: #12646f;
+  background-color: #ececec;
   margin: 20% 5% 3% 5%;
-  padding-left: 1%;
   font-size: 30px;
 }
 
@@ -27,18 +27,55 @@ h3  {
 }
 
 form {
-  margin: 30% 5% 0 5%;
-  padding: 2% 55% 1% 2%;
+  margin: 20% 5% 0 5%;
+  padding: 2% 35% 1% 2%;
   font-style: 'Ubuntu', sans-serif;
+  font-size: 16px;
+}
+
+fieldset {
+  padding: 5%;
+}
+
+input {
+  margin-bottom: 3%;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+  text-shadow: #000 1px 1px 2px;
+  width: 100%;
+}
+
+label {
+  font-size: 18px;
+  width: 100%;
+  color: #ffffff;
+  text-shadow: #000 1px 1px 2px;
+}
+
+#intro {
+  background-color: #ececec;
+  width: 100%;
+  height: 100%;
+  margin: 20% 0 0 0;
 }
 
 #formButton {
   border: none;
   padding: 5%;
   background: #ececec;
+  color: #12646f;
+  font-weight: 1px;
   font-family: 'Ubuntu', sans-serif;
   padding: 2% 2% 2% 2%;
   margin: 5% 1% 1% 2%;
+  border-radius: 5px;
+  border-bottom: 5px solid #c2b394;
+  border-right: 3px solid #c2b394;
+  text-transform: uppercase;
 }
 
 #formButton:hover {
@@ -62,6 +99,21 @@ form {
   padding: 5% 10% 5% 10%;
 }
 
+#socialLogos {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#instagram {
+  width: 10%;
+  height: 10%;
+}
+
+#facebook {
+  width: 17%;
+  height: 17%;
+}
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
 
@@ -76,6 +128,18 @@ form {
 
 /**********DESKTOP*************/
 @media screen and (min-width: 1000px) {
+  h1 {
+    margin: 0;
+    padding: 3% 0 3% 0;
+    background-color: #ececec;
+  }
+
+  #intro {
+    background-color: #ececec;
+    padding: 10% 0 2% 0;
+    margin: 0;
+  }
+
   .row {
     display: flex;
     flex-direction: row-reverse;
@@ -85,7 +149,17 @@ form {
     flex-grow: 1;
   }
 
+  #columnOne {
+    flex-basis: 50%;
+  }
+
   #contactForm {
     margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  input {
+    width: 80%;
   }
 }
