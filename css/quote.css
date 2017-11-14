@@ -34,6 +34,7 @@ ul {
 
 li {
   font-size: 30px;
+  font-family: 'Cabin', sans-serif;
 }
 
 button {
@@ -114,6 +115,36 @@ input[type="radio"], input[type="checkbox"] {
   transform: scale(3);
 }
 
+button {
+  background-color: #53b0bd;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 0.5em;
+  width: 95%;
+}
+
+#project-title, #client-name, #timeline, #totalCost {
+  font-size: 34px;
+}
+
+#prop-title-div, #cost-title {
+  text-align: center;
+}
+
+/* FOOTER SECION*/
+#footer {
+  text-align: center;
+  background-color: #ececec;
+  padding: 1.5em;
+  font-size: 1em;
+}
+
+#footerLogo {
+  width: 15%;
+  height: 15%;
+}
+
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   * {
@@ -136,12 +167,18 @@ input[type="radio"], input[type="checkbox"] {
   font-size: 16px;
 }
 p {
-  font-size: 1em;
+  font-size: 1.2em;
+}
+h1{
+  font-size: 2em;
 }
 h2 {
   font-size: 2em;
   text-transform: uppercase;
   margin: 0;
+}
+li{
+  font-size: 1.2em;
 }
 form {
   width: 50%;
