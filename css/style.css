@@ -211,4 +211,12 @@ h1 {
   flex-direction: row;
   display: flex;
 }
+
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.column {
+  flex-grow: 1;
 }
