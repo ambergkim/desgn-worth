@@ -22,3 +22,7 @@ Time consuming process for getting online cost of website design ('InvoQuote')
 ## Misc.
 * 'For freelancers... by Freelancers'
 * Form will be a "get to know you" conversation more than a survey
+
+#Special Thanks to
+* Jonathan Suh https://jonsuh.com/hamburgers/ for the cool hamburger animation
+* Nicolas Gallagher https://github.com/necolas for normalize.css
