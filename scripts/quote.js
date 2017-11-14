@@ -225,7 +225,7 @@ function submitProjectInfo(event) {
   timelineSpan.innerText = newProject.timeline + ' weeks';
   reqTimelineSpan.innerText = rushOrder + ' weeks';
   if (newProject.rushCost > newProject.totalCost) {
-        totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
   } else {
     totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
   }
