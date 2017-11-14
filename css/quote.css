@@ -25,6 +25,7 @@ h2 {
   font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
   margin-top: 2.5em;
+  margin-bottom: 3%;
 }
 
 ul {
@@ -204,11 +205,12 @@ p {
 }
 h1{
   font-size: 2em;
+  margin-top: 8%;
 }
 h2 {
   font-size: 2em;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 3% 0;
 }
 li{
   font-size: 1.2em;
@@ -234,6 +236,7 @@ input {
 }
 #iqLogo {
   margin: 0 auto;
+  width: 25%;
 }
 input[type="radio"], input[type="checkbox"] {
   width: 20px;
