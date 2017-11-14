@@ -94,8 +94,8 @@ function Project(projectType, pages, products, courses, rushOrder, marketing, re
       this.totalCost = this.totalCost + this.courseCost;
     }
     if (this.rush < this.timeline) {
-       this.rushCost = (this.timeline / this.rush) * this.totalCost;
-     }
+      this.rushCost = (this.timeline / this.rush) * this.totalCost;
+    }
   };
   this.calcTime = function() {
     if (this.projectType === 'basic') {
