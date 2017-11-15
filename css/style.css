@@ -51,6 +51,13 @@
   height: 250px;
   border-radius: 50%;
   margin: 0 auto;
+  border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://link-to-your/image.jpg) no-repeat;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
 .testimonial {
@@ -78,16 +85,24 @@ h1 {
 }
 
 #secondperson {
-  padding: 5%;
-  margin-bottom: 0%;
+  padding: 0%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
 #testwords1 {
-  margin-top: 13%;
+  margin-top: 9%;
+  margin-left: 5%;
 }
 
 #testwords2 {
-  margin-top: 16%;
+  margin-top: 9%;
+  margin-left: 5%;
+}
+
+#testimonialname {
+  margin-left: 5%;
 }
 
 /*****FOOTER*****/
@@ -142,8 +157,10 @@ h1 {
 }
 
 #firstperson {
-  padding: 5%;
-  margin-bottom: 0%;
+  padding: 0%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
 /**********TABLET LANDSCAPE*************/
@@ -216,4 +233,11 @@ h1 {
 
 .column {
   flex-grow: 1;
+}
+
+#container {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
