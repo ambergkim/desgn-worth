@@ -83,14 +83,14 @@
             <legend>Let's get to know you</legend>
             <label for="fName">First Name: </label><input type="text" name="fName" placeholder="First Name" required="required"/><br/>
             <label for="lName">Last Name: </label><input type="text" name="lName" placeholder="Last Name" required="required"/><br/>
-            <label for="company">Company: </label><input type="text" name="company" placeholder="Company"/><br/>
-            <label for="email">Email: </label><input type="email" name="email" placeholder="Email"/><br/>
-            <label for="phone">Phone: </label><input type="number" name="phone" placeholder="Phone Number"/><br/>
+            <label for="company">Company: </label><input type="text" name="company" placeholder="Company" required /><br/>
+            <label for="email">Email: </label><input type="email" name="email" placeholder="Email" required/><br/>
+            <label for="phone">Phone: </label><input type="tel" name="phone" placeholder="Phone Number" required/><br/>
             <label for="sDate">Enter a start date: </label>
             <input type="date" name="sDate" min="" id="sDate"><br>
             <label for="eDate">Enter an end date: </label>
             <input type="date" name="eDate" min="" id="eDate"><br>
-            <button type="submit" name="submit" value="submit" id="letsGo">Lets Go!</button>
+            <button type="submit" form="basicForm" value="submit" id="letsGo">Lets Go!</button>
           </fieldset>
         </form>
       </div>
@@ -157,7 +157,7 @@
       <div id="movingForward">
         <h1>Moving Forward:</h1>
         <p class="textIndent">Would you like to move forward with this project? Please click below to schedule an inital call with us. We would love to chat and get to know you more!<p>
-        <button>Let's Do It!</button>
+        <a href="contact.html"><button>Let's Do It!</button></a>
       </div>
     </section>
     <footer id="footer">

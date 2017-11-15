@@ -55,9 +55,14 @@ function submitBasicForm(event) {
 
   localStorage.setItem('UserOne', JSON.stringify(userInfo));
   var retrievedObject = localStorage.getItem('UserOne');
-}
 
-basicFormEl.addEventListener('submit', submitBasicForm);
+  basicFormDiv.setAttribute('class', 'hideSection');
+  projectInfoDiv.classList.remove('hideSection');
+}
+//submits user info
+basicFormEl.addEventListener('submit', function(event){
+  submitBasicForm(event);
+});
 
 function Project(projectType, pages, products, courses, rushOrder, marketing, reviewManagement, websiteMaintenance) {
   this.projectType = projectType;
@@ -145,7 +150,6 @@ function submitProjectInfo(event) {
   var pages = event.target.pages.value;
   var products = event.target.products.value;
   var courses = event.target.courses.value;
-  console.log('Number of courses in event function are: ' + courses);
   var rushOrder = event.target.rush.value;
   var marketing = event.target.marketing.checked;
   var reviewManagement = event.target.reviewManagement.checked;
@@ -238,14 +242,14 @@ function submitProjectInfo(event) {
     totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
   }
 }
-
+//submits project info
 projectInfo.addEventListener('submit', submitProjectInfo);
 
 // hide 'intro section' and show 'basic info' form
 var graySection = document.getElementById('intro');
 var letsStartButton = document.getElementById('start');
 var basicFormDiv = document.getElementById('basicInfo');
-var letsGoButton = document.getElementById('letsGo');
+// var letsGoButton = document.getElementById('letsGo');
 var tealSection = document.getElementById('forms');
 var projectInfoDiv = document.getElementById('projectInfo');
 var genQuoteButton = document.getElementById('generateQuote');
@@ -284,10 +288,9 @@ var resetPreviousSession = document.getElementById('reset');
 reset.addEventListener('click', function(event){
   event.preventDefault();
   localStorage.clear();
-  alert('Your previous information has been cleared. You are free to begin a new form!');
 });
 
-function restoreSession() {
+function restoreSession(){
   if (localStorage.getItem('UserOne') === null || localStorage.getItem('ProjectOne') === null) {
     alert('Hey there is no user data, please fill in your information from the beginning.');
     localStorage.clear();
@@ -314,7 +317,7 @@ function restoreSession() {
       var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
       baseLi.appendChild(baseNode);
       costBreakDownUl.appendChild(baseLi);
-    }else if(currentProject.projectType === 'onlineCourse') {
+    } else if (currentProject.projectType === 'onlineCourse') {
       var baseLi = document.createElement('li');
       var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
       baseLi.appendChild(baseNode);
@@ -386,7 +389,4 @@ restore.addEventListener('click', function(event){
   event.preventDefault();
   console.log('Event is listening');
   restoreSession();
-  graySection.setAttribute('class', 'hideSection');
-  tealSection.setAttribute('class', 'hideSection');
-  proposalSection.classList.remove('hideSection');
 });
