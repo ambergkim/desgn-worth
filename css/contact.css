@@ -35,10 +35,13 @@ form {
 
 fieldset {
   padding: 5%;
+  font-size: 1.5em;
 }
 
-input {
+input, textarea {
   margin-bottom: 3%;
+  font-size: .7em;
+  resize: none;
 }
 
 legend {
@@ -68,6 +71,7 @@ label {
   padding: 5%;
   background: #ececec;
   color: #12646f;
+  font-size: .8em;
   font-weight: 1px;
   font-family: 'Ubuntu', sans-serif;
   padding: 2% 2% 2% 2%;
@@ -88,9 +92,23 @@ label {
   width: 100%;
 }
 
-#submitMessage {
-  visibility: hidden;
-  background-color: #53b0bd;
+#submitMsg {
+  background-color: #12646f;
+  text-shadow: 0 0 2px black;
+  margin: 0;
+  padding: 2%;
+}
+
+#emailAddress:hover {
+  color: #12646f;
+}
+
+.shrunkenConfirm {
+  display: none;
+}
+
+.expandedConfirm {
+  display: initial;
 }
 
 #coffee {
@@ -106,13 +124,13 @@ label {
 }
 
 #instagram {
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
 }
 
 #facebook {
-  width: 17%;
-  height: 17%;
+  width: 14%;
+  height: 14%;
 }
 
 /*****FOOTER*****/
@@ -164,6 +182,7 @@ label {
 
   #columnOne {
     flex-basis: 50%;
+    width: 340px;
   }
 
   #contactForm {
