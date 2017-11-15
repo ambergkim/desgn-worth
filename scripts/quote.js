@@ -259,13 +259,13 @@ letsStartButton.addEventListener('click', function(event) {
 });
 
 // hide 'basic info' form and show 'project info' form
-letsGoButton.addEventListener('click', function(event) {
+letsGoButton.addEventListener('submit', function(event) {
   basicFormDiv.setAttribute('class', 'hideSection');
   projectInfoDiv.classList.remove('hideSection');
 });
 
 // hide 'project info' form and show quote
-genQuoteButton.addEventListener('click', function(event) {
+genQuoteButton.addEventListener('submit', function(event) {
   tealSection.setAttribute('class', 'hideSection');
   projectInfoDiv.setAttribute('class', 'hideSection');
   proposalSection.classList.remove('hideSection');
