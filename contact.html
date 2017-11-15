@@ -34,7 +34,7 @@
       <div id='columnOne' class="column">
         <h2>Talk</h2>
         <h3>206-538-5058<br>
-        email
+        <a href="http://www.alicialycan@gmail.com">email</a>
         </h3>
         <h2>Walk</h2>
         <h3>5439 Invoke Ave.<br>
@@ -55,23 +55,25 @@
           <label for="lName">Last Name: </label><br/>
           <input type="text" name="lName" required="required"><br>
           <label for="email">Email: </label><br>
-          <input type="text" name="email" required="required"><br>
+          <input type="text" name="email" placeholder="sophie@example.com" required="required"><br>
           <label for="phone">Phone: </label><br>
-          <input type="text" name="phone" ><br>
+          <input type="text" name="phone" placeholder="(123) 456-7890"><br>
           <label for="message">Message: </label><br>
-          <input type="text" name="message"><br>
+          <textarea name="textarea"rows="10" cols="50" placeholder="Questions, concerns, advice? Shoot us a message!"></textarea>
           <button type="submit" id='formButton' value="submit">Send to Desgn Worth</button>
         </fieldset>
       </form>
       </div>
     </section>
-      <div id='submitMessage'>
-        <p>
-          Thank you for contacting us! We look forward to reading your message and will reply back within 24 hours.
-        </p>
-        <p>Cheers!</p>
-        <p>The Desgn Worth Team</p>
+    <section class="shrunkenConfirm" id='confirmationMsg'>
+      <div id='submitMsg'>
+        <h2>
+          Thank you for contacting us! We look forward to reading your message and will reply back within 24 hours.<br>
+          Cheers!<br>
+          The Desgn Worth Team
+        </h2>
       </div>
+    </section>
       <footer id="footer">
         <img id="footerLogo" src="img/desgn-worth-logo.png" />
         <p>&copy; Desgn Worth 2017</p>
