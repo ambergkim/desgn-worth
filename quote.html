@@ -84,8 +84,8 @@
             <label for="fName">First Name: </label><input type="text" name="fName" placeholder="First Name" required="required"/><br/>
             <label for="lName">Last Name: </label><input type="text" name="lName" placeholder="Last Name" required="required"/><br/>
             <label for="company">Company: </label><input type="text" name="company" placeholder="Company"/><br/>
-            <label for="email">Email: </label><input type="text" name="email" placeholder="Email"/><br/>
-            <label for="phone">Phone: </label><input type="text" name="phone" placeholder="Phone Number"/><br/>
+            <label for="email">Email: </label><input type="email" name="email" placeholder="Email"/><br/>
+            <label for="phone">Phone: </label><input type="number" name="phone" placeholder="Phone Number"/><br/>
             <label for="sDate">Enter a start date: </label>
             <input type="date" name="sDate" min="" id="sDate"><br>
             <label for="eDate">Enter an end date: </label>
@@ -100,16 +100,16 @@
             <legend>What can we help you with?</legend>
             <label>Project Type:</label><br/>
             <input type="radio" name="projectType" value="basic" id="basic" required><label for="basic">Basic 5 Page Website</label><br />
-            <input type="radio" name="projectType" value="eCommerce" id="projectType" required><label for="projectType">eCommerce Website (5 products)</label><br/>
-            <input type="radio" name="projectType" value="membership" id="projectType" required><label for="projectType">Membership Website </label><br/>
-            <input type="radio" name="projectType" value="onlineCourse" id="projectType" required><label for="projectType">Online Course Website </label><br/>
+            <input type="radio" name="projectType" value="eCommerce" id="eCommerce" required><label for="eCommerce">eCommerce Website (5 products)</label><br/>
+            <input type="radio" name="projectType" value="membership" id="membership" required><label for="membership">Membership Website </label><br/>
+            <input type="radio" name="projectType" value="onlineCourse" id="onlineCourse" required><label for="onlineCourse">Online Course Website </label><br/>
             <label for="pages">Number of extra pages:</label>
-            <input type="number" name="pages" id="pages" required><br/>
+            <input type="number" name="pages" id="pages" value="0" required><br/>
             <label for="products">Number of extra products:</label>
-            <input type="products" name="products" id="products"><br/>
-            <label for="products">Number of extra courses:</label>
-            <input type="products" name="products" id="courses"><br/>
-            <label for="rush">Project timeline in weeks:</label><input type="input" name="rush" id="rush"><br/>
+            <input type="products" name="products" id="products" value="0" ><br/>
+            <label for="courses">Number of extra courses:</label>
+            <input type="number" name="courses" id="courses" value="0" ><br/>
+            <label for="rush">Project timeline in weeks:</label><input type="input" name="rush" id="rush" required><br/>
             <label for="">Would you like to be contacted for:</label><br>
             <input type="checkbox" name="marketing" value="marketing"> <label for="marketing">Marketing</label>
             <input type="checkbox" name="reviewManagement" value="reviewManagement"> <label for="reviewManagement">Review Management</label>
