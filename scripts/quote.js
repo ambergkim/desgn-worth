@@ -145,6 +145,7 @@ function submitProjectInfo(event) {
   var pages = event.target.pages.value;
   var products = event.target.products.value;
   var courses = event.target.courses.value;
+  console.log('Number of courses in event function are: ' + courses);
   var rushOrder = event.target.rush.value;
   var marketing = event.target.marketing.checked;
   var reviewManagement = event.target.reviewManagement.checked;
