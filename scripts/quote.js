@@ -154,6 +154,9 @@ function submitProjectInfo(event) {
   newProject.calcTime();
   newProject.calcCost();
 
+  localStorage.setItem('ProjectOne', JSON.stringify(projectQuote));
+  var retrievedObject = localStorage.getItem('ProjectOne');
+
   if (newProject.projectType === 'basic') {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Basic 5 Page Website Base: $5,000');
