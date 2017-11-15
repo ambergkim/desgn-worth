@@ -127,6 +127,10 @@ button {
   width: 95%;
 }
 
+.hideSection {
+  display: none;
+}
+
 .strategy-ul, .about-div, .provide-list, .costBreakdown {
   text-align: left;
   list-style: square;

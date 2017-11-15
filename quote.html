@@ -74,8 +74,8 @@
     <button id="start">Let's Start!</button>
 
     </section>
-    <section id="forms" class="tealSection">
-      <div id="basicInfo">
+    <section id="forms" class="tealSection hideSection">
+      <div id="basicInfo" class="hideSection">
         <form id="basicForm">
           <fieldset>
             <legend>Let's get to know you</legend>
@@ -88,11 +88,11 @@
             <input type="date" name="sDate" min="" id="sDate"><br>
             <label for="eDate">Enter an end date: </label>
             <input type="date" name="eDate" min="" id="eDate"><br>
-            <button type="submit" name="submit" value="submit">Lets Go!</button>
+            <button type="submit" name="submit" value="submit" id="letsGo">Lets Go!</button>
           </fieldset>
         </form>
       </div>
-      <div id="projectInfo">
+      <div id="projectInfo" class="hideSection">
         <form action="" id="project">
           <fieldset>
             <legend>What can we help you with?</legend>
@@ -101,23 +101,23 @@
             <input type="radio" name="projectType" value="eCommerce" id="projectType" required><label for="projectType">eCommerce Website (5 products)</label><br/>
             <input type="radio" name="projectType" value="membership" id="projectType" required><label for="projectType">Membership Website </label><br/>
             <input type="radio" name="projectType" value="onlineCourse" id="projectType" required><label for="projectType">Online Course Website </label><br/>
-            <label for="pages">Number of extra pages</label>
+            <label for="pages">Number of extra pages:</label>
             <input type="number" name="pages" id="pages" required><br/>
-            <label for="products">Number of extra prodcuts</label>
+            <label for="products">Number of extra products:</label>
             <input type="products" name="products" id="products"><br/>
-            <label for="products">Number of extra Course</label>
+            <label for="products">Number of extra courses:</label>
             <input type="products" name="products" id="courses"><br/>
             <label for="rush">Project timeline in weeks:</label><input type="input" name="rush" id="rush"><br/>
             <label for="">Would you like to be contacted for:</label><br>
             <input type="checkbox" name="marketing" value="marketing"> <label for="marketing">Marketing</label>
             <input type="checkbox" name="reviewManagement" value="reviewManagement"> <label for="reviewManagement">Review Management</label>
             <input type="checkbox" name="websiteMaintenance" value="websiteMaintenance"> <label for="websiteMaintenance">Website Maintenance</label>
-            <button type="submit">Generate my quote</button>
+            <button type="submit" id="generateQuote">Generate my quote</button>
           </fieldset>
         </form>
       </div>
     </section>
-    <section id="proposal" class="goldSection">
+    <section id="proposal" class="goldSection hideSection">
       <img id="prop-letterhead" alt="design worth square logo" src="img/design-worth-favicon.png">
       <div id="client-project">
         <div id="prop-title-div"><h2><span id="project-title"></span> Web Design Project Proposal for: <span id="client-name"></span></h2></div><br>

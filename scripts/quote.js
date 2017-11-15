@@ -202,19 +202,19 @@ function submitProjectInfo(event) {
   }
   if (newProject.marketing === true) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Thank you for your interest in Markting, we will have our marketing specialist sitting in our your follow-up call.');
+    var baseNode = document.createTextNode('Thank you for your interest in Marketing. We will have our marketing specialist sitting in during your follow-up call.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   if (newProject.reviewManagement === true) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation, we are excited about the possibility of helping you get more "5-Star" reviews online.');
+    var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation. We are excited about the possibility of helping you get more "5-Star" reviews online.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   if (newProject.websiteMaintenance === true) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('We have many different levels of Website Maintenance, in our follow-up call we will go over the different levels and help you pick out the right level.');
+    var baseNode = document.createTextNode('We have many different levels of Website Maintenance! In our follow-up call, we will go over the different levels and help you choose which fits you best.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
@@ -236,6 +236,36 @@ function submitProjectInfo(event) {
 }
 
 projectInfo.addEventListener('submit', submitProjectInfo);
+
+// hide 'intro section' and show 'basic info' form
+var graySection = document.getElementById('intro');
+var letsStartButton = document.getElementById('start');
+var basicFormDiv = document.getElementById('basicInfo');
+var letsGoButton = document.getElementById('letsGo');
+var tealSection = document.getElementById('forms');
+var projectInfoDiv = document.getElementById('projectInfo');
+var genQuoteButton = document.getElementById('generateQuote');
+var proposalSection = document.getElementById('proposal');
+
+letsStartButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  graySection.setAttribute('class', 'hideSection');
+  tealSection.classList.remove('hideSection');
+  basicFormDiv.classList.remove('hideSection');
+});
+
+// hide 'basic info' form and show 'project info' form
+letsGoButton.addEventListener('click', function(event) {
+  basicFormDiv.setAttribute('class', 'hideSection');
+  projectInfoDiv.classList.remove('hideSection');
+});
+
+// hide 'project info' form and show quote
+genQuoteButton.addEventListener('click', function(event) {
+  tealSection.setAttribute('class', 'hideSection');
+  projectInfoDiv.setAttribute('class', 'hideSection');
+  proposalSection.classList.remove('hideSection');
+});
 
 function firstLetterCapital (word) {
   var wordArray = word.split(' ');
