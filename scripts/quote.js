@@ -193,7 +193,7 @@ function submitProjectInfo(event) {
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
-  if (newProject.rush > 0) {
+  if (newProject.rush < newProject.timeline) {
     var additionalCost = newProject.rushCost - newProject.totalCost;
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
