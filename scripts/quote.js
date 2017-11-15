@@ -278,3 +278,110 @@ function firstLetterCapital (word) {
   }
   return newWordArray.join(' ');
 }
+
+var resetPreviousSession = document.getElementById('reset');
+reset.addEventListener('click', function(event){
+  event.preventDefault();
+  localStorage.clear();
+});
+
+function restoreSession(){
+    if (localStorage.getItem('UserOne') === null || localStorage.getItem('ProjectOne') === null) {
+      alert('Hey there is no user data, please fill in your information from the beginning.');
+      localStorage.clear();
+    } else {
+      console.log('There is stuff in localStorage');
+      var getUserInfo = localStorage.getItem('UserOne');
+      var getProjectInfo = localStorage.getItem('ProjectOne');
+      var userInfo = JSON.parse(getUserInfo);
+      var projectInfo = JSON.parse(getProjectInfo);
+      var currentUser = userInfo[0];
+      var currentProject = projectInfo[0];
+      if (currentProject.projectType === 'basic') {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Basic 5 Page Website Base: $5,000');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      } else if (currentProject.projectType === 'eCommerce') {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Basic eCommerce (10 Pages + first 5 products): $15,000');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      } else if(currentProject.projectType === 'membership') {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }else if(currentProject.projectType === 'onlineCourse') {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.pages > 0) {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Extra Pages: ' + currentProject.pages + '. Cost: $' + currentProject.pagesCost.toLocaleString());
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.products > 0) {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Extra Products: ' + currentProject.products + '. Cost: $' + currentProject.productsCost.toLocaleString());
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.courses > 0) {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Extra Courses: ' + currentProject.courses + '. Cost: $' + currentProject.courseCost.toLocaleString());
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.rush < currentProject.timeline) {
+        var additionalCost = currentProject.rushCost - currentProject.totalCost;
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.marketing === true) {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('Thank you for your interest in Markting, we will have our marketing specialist sitting in our your follow-up call.');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.reviewManagement === true) {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation, we are excited about the possibility of helping you get more "5-Star" reviews online.');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      if (currentProject.websiteMaintenance === true) {
+        var baseLi = document.createElement('li');
+        var baseNode = document.createTextNode('We have many different levels of Website Maintenance, in our follow-up call we will go over the different levels and help you pick out the right level.');
+        baseLi.appendChild(baseNode);
+        costBreakDownUl.appendChild(baseLi);
+      }
+      projectTitle.textContent = firstLetterCapital(currentProject.projectType);
+      clientName.textContent = currentUser.fName + ' ' + currentUser.lName;
+      dateExp();
+      validProp.textContent = month + '/' + day + '/' + year;
+      timelineSpan.innerText = currentProject.timeline + ' weeks';
+      if (currentProject.rush < currentProject.timeline) {
+        reqTimelineSpan.innerText = currentProject.rush + ' weeks';
+      } else {
+        reqTimelineSpan.innerText = 'n/a';
+      }
+      if (currentProject.rushCost > currentProject.totalCost) {
+        totalCostSpan.innerText = '$' + currentProject.rushCost.toLocaleString();
+      } else {
+        totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString();
+      }
+    }
+};
+
+var restorePreviousSession = document.getElementById('restore');
+restore.addEventListener('click', function(event){
+  event.preventDefault();
+  console.log('Event is listening');
+  restoreSession();
+});
