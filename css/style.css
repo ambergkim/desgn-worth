@@ -60,6 +60,12 @@
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
+.topimg {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
 .testimonial {
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -84,21 +90,11 @@ h1 {
   font-size: 20px;
 }
 
-#secondperson {
-  padding: 0%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-  margin-left: 2%;
-}
-
-#testwords1 {
+.testwords {
   margin-top: 9%;
   margin-left: 5%;
-}
-
-#testwords2 {
-  margin-top: 9%;
-  margin-left: 5%;
+  display: inline;
+  float: right;
 }
 
 #testimonialname {
@@ -172,13 +168,6 @@ h1 {
   .topNav a {
     font-size: 1.5em;
   }
-}
-
-#firstperson {
-  padding: 0%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-  margin-left: 2%;
 }
 
 /**********TABLET LANDSCAPE*************/
@@ -255,8 +244,5 @@ h1 {
 .container {
   margin-top: 3%;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 }
