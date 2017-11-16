@@ -8,7 +8,24 @@ Are you frustrated with
 * [Data] (#data)
   * [Sources] (#sources)
   * [Classifications] (#classifications)
-  *
+  * [Sentiment Analysis] (#sentiment-analysis)
+  * [Data Model] (#data-model)
+* [How to use Desgn Worth] (#how-to-use)
+  * [Homepage] (#homepage)
+  * [Get Quote] (#get-quote)
+  * [InvoQuote app] (#invo-quote-app)
+
+## <a name="technologies"></a>Technologies
+* **Back-end**: [JavaScript] (https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* **Front-end**: [JavaScript] (https://developer.mozilla.org/en-US/docs/Web/JavaScript), [HTML5] (https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5),[CSS3] (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
+
+## <a name="data"></a>Data
+
+#### <a name="sentiment-analysis"></a>Sentiment Analysis
+
+## <a name="how-to-use"></a>How to Use InvoQuote
+#### <a name="homepage"></a>Homepage
+![image of homepage](/static/img/homepage.png)
 
 ## Team: Desgn Worth
 
