@@ -241,6 +241,9 @@ function submitProjectInfo(event) {
   } else {
     totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
   }
+  tealSection.setAttribute('class', 'hideSection');
+  projectInfoDiv.setAttribute('class', 'hideSection');
+  proposalSection.classList.remove('hideSection');
 }
 //submits project info
 projectInfo.addEventListener('submit', submitProjectInfo);
@@ -252,7 +255,6 @@ var basicFormDiv = document.getElementById('basicInfo');
 // var letsGoButton = document.getElementById('letsGo');
 var tealSection = document.getElementById('forms');
 var projectInfoDiv = document.getElementById('projectInfo');
-var genQuoteButton = document.getElementById('generateQuote');
 var proposalSection = document.getElementById('proposal');
 
 letsStartButton.addEventListener('click', function(event) {
@@ -260,19 +262,6 @@ letsStartButton.addEventListener('click', function(event) {
   graySection.setAttribute('class', 'hideSection');
   tealSection.classList.remove('hideSection');
   basicFormDiv.classList.remove('hideSection');
-});
-
-// hide 'basic info' form and show 'project info' form
-letsGoButton.addEventListener('submit', function(event) {
-  basicFormDiv.setAttribute('class', 'hideSection');
-  projectInfoDiv.classList.remove('hideSection');
-});
-
-// hide 'project info' form and show quote
-genQuoteButton.addEventListener('submit', function(event) {
-  tealSection.setAttribute('class', 'hideSection');
-  projectInfoDiv.setAttribute('class', 'hideSection');
-  proposalSection.classList.remove('hideSection');
 });
 
 function firstLetterCapital (word) {
