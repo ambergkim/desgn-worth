@@ -204,7 +204,7 @@ function submitProjectInfo(event) {
   if (newProject.rush < newProject.timeline) {
     var additionalCost = newProject.rushCost - newProject.totalCost;
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
+    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString(undefined, {maximumFractionDigits: 2}));
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
@@ -237,9 +237,9 @@ function submitProjectInfo(event) {
     reqTimelineSpan.innerText = 'n/a';
   }
   if (newProject.rushCost > newProject.totalCost) {
-    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
   } else {
-    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
   }
   tealSection.setAttribute('class', 'hideSection');
   projectInfoDiv.setAttribute('class', 'hideSection');
@@ -391,9 +391,9 @@ function restoreSession(){
       reqTimelineSpan.innerText = 'n/a';
     }
     if (currentProject.rushCost > currentProject.totalCost) {
-      totalCostSpan.innerText = '$' + currentProject.rushCost.toLocaleString();
+      totalCostSpan.innerText = '$' + currentProject.rushCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
     } else {
-      totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString();
+      totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
     }
   }
 };
