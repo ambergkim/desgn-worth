@@ -396,6 +396,9 @@ function restoreSession(){
       totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString();
     }
   }
+  tealSection.setAttribute('class', 'hideSection');
+  projectInfoDiv.setAttribute('class', 'hideSection');
+  proposalSection.classList.remove('hideSection');
 };
 
 var restorePreviousSession = document.getElementById('restore');
