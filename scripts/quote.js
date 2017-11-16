@@ -300,13 +300,14 @@ function firstLetterCapital (word) {
 
 var resetPreviousSession = document.getElementById('reset');
 reset.addEventListener('click', function(event){
+  alert('Previous session is erased. You can now fill out your info from the beginning.')
   event.preventDefault();
   localStorage.clear();
 });
 
 function restoreSession(){
   if (localStorage.getItem('UserOne') === null || localStorage.getItem('ProjectOne') === null) {
-    alert('Hey there is no user data, please fill in your information from the beginning.');
+    alert('Oops! There is no previous session, please fill in your information from the beginning.');
     localStorage.clear();
   } else {
     console.log('There is stuff in localStorage');
