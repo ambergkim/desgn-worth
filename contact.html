@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Say Hi!</title>
+    
+    <meta property="og:title" content="Desgn Worth" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" /> <!--Need URL when we deploy-->
+    <meta property="og:image" content="img/desgn-worth-logo.png" />
+    <meta property="og:description" content="Desgn Worth...for freelancers, by freelancers!" />
+
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -34,7 +41,7 @@
       <div id='columnOne' class="column">
         <h2>Talk</h2>
         <h3>206-538-5058<br>
-        <a href="http://www.alicialycan@gmail.com">email</a>
+        email
         </h3>
         <h2>Walk</h2>
         <h3>5439 Invoke Ave.<br>
@@ -59,21 +66,19 @@
           <label for="phone">Phone: </label><br>
           <input type="tel" name="phone" placeholder="(123) 456-7890"><br>
           <label for="message">Message: </label><br>
-          <textarea name="textarea"rows="10" cols="50" placeholder="Questions, concerns, advice? Shoot us a message!"></textarea>
+          <input type="text" name="message"><br>
           <button type="submit" id='formButton' value="submit">Send to Desgn Worth</button>
         </fieldset>
       </form>
       </div>
     </section>
-    <section class="shrunkenConfirm" id='confirmationMsg'>
-      <div id='submitMsg'>
-        <h2>
-          Thank you for contacting us! We look forward to reading your message and will reply back within 24 hours.<br>
-          Cheers!<br>
-          The Desgn Worth Team
-        </h2>
+      <div id="submitMessage">
+        <p>
+          Thank you for contacting us! We look forward to reading your message and will reply back within 24 hours.
+        </p>
+        <p>Cheers!</p>
+        <p>The Desgn Worth Team</p>
       </div>
-    </section>
       <footer id="footer">
         <img id="footerLogo" src="img/desgn-worth-logo.png" />
         <p>&copy; Desgn Worth 2017</p>
