@@ -359,7 +359,7 @@ function restoreSession(){
     if (currentProject.rush < currentProject.timeline) {
       var additionalCost = currentProject.rushCost - currentProject.totalCost;
       var baseLi = document.createElement('li');
-      var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
+      var baseNode = document.createTextNode('Requested Timeline Adds an Additional: $' + additionalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2}));
       baseLi.appendChild(baseNode);
       costBreakDownUl.appendChild(baseLi);
     }
