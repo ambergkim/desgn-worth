@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Desgn Worth: InvoQuote</title>
+    
+    <meta property="og:title" content="Desgn Worth" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" /> <!--Need URL when we deploy-->
+    <meta property="og:image" content="img/desgn-worth-logo.png" />
+    <meta property="og:description" content="Desgn Worth...for freelancers, by freelancers!" />
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/hamburgers.css">
     <link rel="stylesheet" href="css/nav.css">
@@ -85,7 +92,7 @@
             <label for="lName">Last Name: </label><input type="text" name="lName" placeholder="Last Name" required="required"/><br/>
             <label for="company">Company: </label><input type="text" name="company" placeholder="Company" required /><br/>
             <label for="email">Email: </label><input type="email" name="email" placeholder="Email" required/><br/>
-            <label for="phone">Phone: </label><input type="tel" name="phone" placeholder="Phone Number" required/><br/>
+            <label for="phone">Phone: </label><input type="tel" name="phone" placeholder="Phone Number" minlength="9" maxlength="14" required/><br/>
             <label for="sDate">Enter a start date: </label>
             <input type="date" name="sDate" min="" id="sDate"><br>
             <label for="eDate">Enter an end date: </label>
