@@ -11,13 +11,15 @@
 }
 
 #taglinetext{
+  color: white;
   font-weight: bold;
   padding-top: 20%;
   font-size: 150%;
 }
 
 .cta{
-  border: none;
+  color: white;
+  border: 1px solid white;
   padding: 5%;
   background: #53b0bd;
   font-family: 'Ubuntu', sans-serif;
@@ -156,7 +158,7 @@ footer{
   }
 
   .cta{
-    border: none;
+    border: 1px solid white;
     padding: 2%;
     background: #53b0bd;
     font-family: 'Ubuntu', sans-serif;
@@ -241,9 +243,10 @@ footer{
   }
 
   .cta{
-    border: none;
+    border: 1px solid white;
+    color: white;
     padding: 2%;
-    background: #53b0bd;
+    background:#12646f;
     font-family: 'Ubuntu', sans-serif;
     margin: 2% auto;
     /*transition-property: background;*/
@@ -253,8 +256,9 @@ footer{
   }
 
   .cta:hover{
+    border: 1px solid white;
     color: white;
-    background: #12646f;
+    background: #53b0bd;
     border-radius: 25px;
   }
 
