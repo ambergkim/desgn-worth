@@ -3,11 +3,11 @@
 }
 
 #tagline{
-  background-image: url(../img/index-background.jpg);
+  background-image: url(../img/Homepage.jpg);
   background-size: cover;
   padding: 30% 10%;
   text-align: center;
-  box-shadow: 0px 0px 20px #888888;
+  box-shadow: 0px 0px 10px black;
 }
 
 #taglinetext{
@@ -111,7 +111,7 @@ footer{
   #taglinetext{
     color: white;
     font-size: 400%;
-    text-shadow: 2px 2px grey;
+    text-shadow: 2px 2px black;
     font-weight: bold;
     padding-top: 10%;
   }
@@ -150,7 +150,7 @@ footer{
   #taglinetext{
     color: white;
     font-size: 200%;
-    text-shadow: 2px 2px grey;
+    text-shadow: 2px 2px black;
     font-weight: bold;
     padding-top: 10%;
   }
@@ -235,7 +235,7 @@ footer{
   #taglinetext{
     color: white;
     font-size: 250%;
-    text-shadow: 2px 2px grey;
+    text-shadow: 2px 2px black;
     font-weight: bold;
     padding-top: 10%;
   }

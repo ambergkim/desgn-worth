@@ -1,11 +1,13 @@
-# Team: Desgn Worth
 
-## Members:
-* Alicia Lycan
-* Amber Kim
-* Chris Lesesne
-* Devin Cunningham
-* Eric Cobb
+
+## Team: Desgn Worth
+
+# <a name="team-members"></a>Team Members
+* "Alicia Lycan" <alicia@desgnworth.com>
+* "Amber Kim" <amber@desgnworth.com>
+* "Chris Lesesne" <chris@desgnworth.com>
+* "Devin Cunningham" <devin@desgnworth.com>
+* "Eric Cobb" <eric@desgnworth.com>
 
 ## Project Topic
 Web app for freelancers & agencies
