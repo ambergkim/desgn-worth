@@ -177,7 +177,7 @@ function submitProjectInfo(event) {
     var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
-  }else if(newProject.projectType === 'onlineCourse') {
+  } else if (newProject.projectType === 'onlineCourse') {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
     baseLi.appendChild(baseNode);
@@ -204,7 +204,7 @@ function submitProjectInfo(event) {
   if (newProject.rush < newProject.timeline) {
     var additionalCost = newProject.rushCost - newProject.totalCost;
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
+    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString(undefined, {maximumFractionDigits: 2}));
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
@@ -237,22 +237,47 @@ function submitProjectInfo(event) {
     reqTimelineSpan.innerText = 'n/a';
   }
   if (newProject.rushCost > newProject.totalCost) {
-    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
   } else {
-    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
   }
   tealSection.setAttribute('class', 'hideSection');
   projectInfoDiv.setAttribute('class', 'hideSection');
   proposalSection.classList.remove('hideSection');
 }
+
 //submits project info
-projectInfo.addEventListener('submit', submitProjectInfo);
+projectInfo.addEventListener('submit', function(event){
+  submitProjectInfo(event);
+});
+
+var basicRadio = document.getElementById('basic');
+var eCommerceRadio = document.getElementById('eCommerce');
+var membershipRadio = document.getElementById('membership');
+var onlineCourseRadio = document.getElementById('onlineCourse');
+var productsInput = document.getElementById('products');
+var coursesInput = document.getElementById('courses');
+basicRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+eCommerceRadio.addEventListener('click', function(event){
+  productsInput.removeAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+membershipRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+onlineCourseRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.removeAttribute('disabled', '');
+});
 
 // hide 'intro section' and show 'basic info' form
 var graySection = document.getElementById('intro');
 var letsStartButton = document.getElementById('start');
 var basicFormDiv = document.getElementById('basicInfo');
-// var letsGoButton = document.getElementById('letsGo');
 var tealSection = document.getElementById('forms');
 var projectInfoDiv = document.getElementById('projectInfo');
 var proposalSection = document.getElementById('proposal');
@@ -366,9 +391,9 @@ function restoreSession(){
       reqTimelineSpan.innerText = 'n/a';
     }
     if (currentProject.rushCost > currentProject.totalCost) {
-      totalCostSpan.innerText = '$' + currentProject.rushCost.toLocaleString();
+      totalCostSpan.innerText = '$' + currentProject.rushCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
     } else {
-      totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString();
+      totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
     }
   }
 };
