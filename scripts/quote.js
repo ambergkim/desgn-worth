@@ -177,7 +177,7 @@ function submitProjectInfo(event) {
     var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
-  }else if(newProject.projectType === 'onlineCourse') {
+  } else if (newProject.projectType === 'onlineCourse') {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
     baseLi.appendChild(baseNode);
@@ -245,14 +245,39 @@ function submitProjectInfo(event) {
   projectInfoDiv.setAttribute('class', 'hideSection');
   proposalSection.classList.remove('hideSection');
 }
+
 //submits project info
-projectInfo.addEventListener('submit', submitProjectInfo);
+projectInfo.addEventListener('submit', function(event){
+  submitProjectInfo(event);
+});
+
+var basicRadio = document.getElementById('basic');
+var eCommerceRadio = document.getElementById('eCommerce');
+var membershipRadio = document.getElementById('membership');
+var onlineCourseRadio = document.getElementById('onlineCourse');
+var productsInput = document.getElementById('products');
+var coursesInput = document.getElementById('courses');
+basicRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+eCommerceRadio.addEventListener('click', function(event){
+  productsInput.removeAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+membershipRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+onlineCourseRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.removeAttribute('disabled', '');
+});
 
 // hide 'intro section' and show 'basic info' form
 var graySection = document.getElementById('intro');
 var letsStartButton = document.getElementById('start');
 var basicFormDiv = document.getElementById('basicInfo');
-// var letsGoButton = document.getElementById('letsGo');
 var tealSection = document.getElementById('forms');
 var projectInfoDiv = document.getElementById('projectInfo');
 var proposalSection = document.getElementById('proposal');
