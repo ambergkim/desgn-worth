@@ -140,7 +140,8 @@ label {
 /*****FOOTER*****/
 footer {
   text-align: center;
-  font-size: .5em;
+  font-size: 0.7em;
+  font-family: 'Cabin';
 }
 
 #footerLogo {
@@ -211,6 +212,11 @@ footer {
     background-color: #ececec;
     padding: 1.5em;
     font-size: 1em;
+  }
+
+  footer p {
+    font-size: 1em;
+    font-family: 'Cabin'
   }
 
   #footerLogo {
