@@ -246,5 +246,8 @@ h1 {
 .container {
   margin-top: 3%;
   display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 }
