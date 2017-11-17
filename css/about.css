@@ -1,0 +1,263 @@
+* {
+  font-family: 'Cabin', sans-serif;
+}
+
+p {
+  font-size: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 4em;
+  text-align: center;
+  margin: 5% 0 0 0;
+}
+
+h4 {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+}
+
+a:link {
+  color: #12646f;
+}
+
+a:active {
+  color: #53b0bd;
+}
+
+a:visited {
+  color: #c2b394;
+}
+
+.container1 {
+  padding: 5% 0;
+}
+
+.container2 {
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.contactLink {
+  padding: 5% 5% 0;
+}
+
+.bannerquote {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.testimonial {
+  margin-top: 3%;
+  padding: 5%;
+  background-color: #ececec;
+  font-size: 0.75em;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialname {
+  margin-left: 5%;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.img-circle {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  border: solid 2px #c2b394;
+  border-radius: 50%;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+.topimg {
+  padding: 2%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.bio {
+  border: solid 2px #c2b394;
+  padding: 5%;
+  flex-basis: auto;
+}
+
+#section1 {
+  background: url(../img/mountain.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 30% 5% 20% 5%;
+}
+
+#section2 {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#worth-style {
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+/*****FOOTER*****/
+#footer {
+  text-align: center;
+  background-color: #ececec;
+  padding: 1.5em;
+  margin-top: 2em;
+  font-size: 0.5em;
+}
+
+#footerLogo {
+  width: 15%;
+  height: 15%;
+}
+
+/**********PHONE LANDSCAPE*************/
+@media screen and (orientation: landscape) {
+  h1 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 40px;
+  }
+  .bannerquote {
+    font-size: 2em;
+  }
+  .img-circle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/**********TABLET*************/
+@media screen and (min-width: 750px) {
+}
+
+/**********TABLET LANDSCAPE*************/
+@media screen and (min-width: 750px) and (orientation: landscape){
+}
+
+/**********DESKTOP*************/
+@media screen and (min-width: 1000px) {
+  p {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+  }
+  h4 {
+    font-size: 0.75em;
+  }
+  .testimonial {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    padding: 0 10%;
+  }
+  .testimonialname {
+    font-size: 0.75em;
+  }
+  .topimg {
+    width: 15%;
+    height: 15%;
+  }
+  .img-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .contactLink {
+    margin: 0 5%;
+  }
+  .container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 5%;
+  }
+  .container2 {
+    flex-grow: 1;
+    width: 30%;
+    padding: 0;
+    margin: 5% 5%;
+  }
+  .bio {
+    margin: 0;
+  }
+  #section1 {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  #section2 {
+    padding: 5% 15% 5%;
+    margin: 0;
+  }
+  #values p {
+    font-size: 20px;
+    margin: 5% 10%;
+  }
+  #meetourteam {
+    padding-top: 5%;
+  }
+  #contactBottom {
+    background: url(../img/mountain.jpg);
+    background-position: center center;
+    height: 50vh;
+    background-size: cover;
+    padding-top: 31%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 47%;
+  }
+}
+
+/**********DESKTOP2*************/
+@media screen and (min-width: 1200px) {
+  .container2 {
+    width: 20%;
+    padding: 0;
+    margin: 5% 3%;
+  }
+  #section1 {
+    padding-top: 25%;
+  }
+}
