@@ -12,6 +12,7 @@ h1 {
   color: #12646f;
   background-color: #ececec;
   margin: 20% 5% 3% 5%;
+  padding-top: 3%;
   font-size: 30px;
 }
 
@@ -57,6 +58,26 @@ label {
   width: 100%;
   color: #ffffff;
   text-shadow: #000 1px 1px 2px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+#columnOne {
+  flex-basis: 50%;
+  width: 340px;
+}
+
+#contactForm {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 #intro {
@@ -142,6 +163,7 @@ footer {
   text-align: center;
   font-size: 0.7em;
   font-family: 'Cabin';
+  padding-top: 2%;
 }
 
 #footerLogo {

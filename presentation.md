@@ -23,6 +23,13 @@ Hi I'm ___________________.
 And I'm ____________________.
 And here is InvoQuote ________________________.
 (invoquote walkthrough).
+
+* Introduce app, show in mobile version-designed mobile first responsive, utilized a hamburger option for our menu.
+* Introduce Quote homepage and user options
+* Contact page
+###Devin
+* Introduce local storage (restore/reset options)
+* Forms and Project Proposal pages
 And that's it! Now here is Amber and Chris to talk about the challenges we went through and overcame and to answer your questions.
 
 ## Challenges: Chris
