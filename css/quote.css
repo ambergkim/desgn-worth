@@ -238,7 +238,17 @@ input {
   display: flex;
   flex-direction: row;
 }
+.row-site {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .column {
+  flex-grow: 1;
+  padding: 5%;
+}
+.column-site {
+  max-width: 40%;
   flex-grow: 1;
   padding: 5%;
 }
