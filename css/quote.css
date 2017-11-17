@@ -167,19 +167,6 @@ button {
   color: #000;
 }
 
-/* FOOTER SECTION*/
-#footer {
-  text-align: center;
-  background-color: #ececec;
-  padding: 1.5em;
-  font-size: 1em;
-}
-
-#footerLogo {
-  width: 15%;
-  height: 15%;
-}
-
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   * {
@@ -195,7 +182,6 @@ button {
 }
 /**********TABLET*************/
 @media screen and (min-width: 750px) {
-
 }
 
 /**********TABLET LANDSCAPE*************/
@@ -205,63 +191,62 @@ button {
 /**********DESKTOP*************/
 @media screen and (min-width: 1050px) {
 /*Intro Section*/
-* {
-  font-size: 16px;
-}
-p {
-  font-size: 1.2em;
-}
-h1{
-  font-size: 2em;
-  margin-top: 8%;
-}
-h2 {
-  font-size: 2em;
-  text-transform: uppercase;
-  margin: 0 0 3% 0;
-}
-li{
-  font-size: 1.2em;
-}
-form {
-  width: 50%;
-  margin: auto;
-}
-label {
-  font-size: 1em;
-}
-input {
-  padding: 0.25em;
-  font-size: 1em;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-}
-.row-site {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.column {
-  flex-grow: 1;
-  padding: 5%;
-}
-.column-site {
-  max-width: 40%;
-  flex-grow: 1;
-  padding: 5%;
-}
-#iqLogo {
-  margin: 0 auto;
-  width: 25%;
-}
-#prop-letterhead {
-  width: 15%;
-}
-input[type="radio"], input[type="checkbox"] {
-  width: 20px;
-  transform: scale(1);
-}
-
+  * {
+    font-size: 16px;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  h1{
+    font-size: 2em;
+    margin-top: 8%;
+  }
+  h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0 0 3% 0;
+  }
+  li{
+    font-size: 1.2em;
+  }
+  form {
+    width: 50%;
+    margin: auto;
+  }
+  label {
+    font-size: 1em;
+  }
+  input {
+    padding: 0.25em;
+    font-size: 1em;
+  }
+  input[type="radio"], input[type="checkbox"] {
+    width: 20px;
+    transform: scale(1);
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .row-site {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .column {
+    flex-grow: 1;
+    padding: 5%;
+  }
+  .column-site {
+    max-width: 40%;
+    flex-grow: 1;
+    padding: 5%;
+  }
+  #iqLogo {
+    margin: 0 auto;
+    width: 25%;
+  }
+  #prop-letterhead {
+    width: 15%;
+  }
 }

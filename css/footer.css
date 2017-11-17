@@ -1,0 +1,15 @@
+footer {
+  text-align: center;
+  background-color: #ececec;
+  padding: 3%;
+  margin-top: 2em;
+}
+
+.footerLogo {
+  width: 15%;
+  height: 15%;
+}
+
+.copyright {
+  font-size: 1em;
+}
