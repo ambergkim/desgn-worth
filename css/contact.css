@@ -61,6 +61,10 @@ label {
   text-shadow: #000 1px 1px 2px;
 }
 
+a {
+  color: #fbfbfb;
+}
+
 .row {
   display: flex;
   flex-direction: column;
@@ -85,7 +89,8 @@ label {
   background-color: #ececec;
   width: 100%;
   height: 100%;
-  margin: 20% 0 0 0;
+  margin: 0;
+  padding-top: 5%;
 }
 
 #formButton {
