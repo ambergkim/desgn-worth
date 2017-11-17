@@ -6,17 +6,13 @@ Your time is important. And if you are a business owner and working with clients
 
 What would you say if I were to tell you that we can help you eliminate the back and forth dance to move potential clients into being actual clients.
 
-Hi, my name is _____ and I am a ______ at Design Worth. We are a Web Development firm and we built a cool app you can use for your agency or service based business.
+Hi, my name is Eric and I worked on the About Me Page for our site. We approached this project as a Web Development firm and built a cool app you can use for your agency or service based business.
 
-At Design Worth we value ____________. Our team works together like this/Our team culture is:
-
-_____
-______
-________
+At Design Worth we value honesty, getting inspiration from new tech and ideas, diversity, building communities, and lifelong learning. Out team is self-managed and everyone is accountable for what they do and for each other.
 
 You can learn more about our team here on this page.
 
-More importantly, we have our new product our InvoQuote that lets you ___________. And here are _____________ and ____________ to walk you through it.
+More importantly, we have our new product our InvoQuote that lets you send your potential clients a proposal or quote instantly. And here are Devin and Alicia to walk you through it.
 
 ## InvoQuote Overview: Devin & Alicia
 Hi I'm ___________________.
