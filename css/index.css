@@ -1,20 +1,14 @@
-*{
-
+p {
+  font-size: 50px;
 }
 
-#tagline{
-  background-image: url(../img/Homepage.jpg);
-  background-size: cover;
-  padding: 30% 10%;
+footer{
   text-align: center;
-  box-shadow: 0px 0px 10px black;
+  font-size: 0.5em;
 }
 
-#taglinetext{
-  color: white;
-  font-weight: bold;
-  padding-top: 20%;
-  font-size: 150%;
+button {
+  font-size: 2.5em;
 }
 
 .cta{
@@ -30,19 +24,10 @@
   padding: 10% 10%;
 }
 
-#team{
-    background-image: url(../img/group.png);
-    padding: 15% 10%;
-    background: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
 .teamText{
   color: white;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 4em;
   text-align: center;
   text-shadow: 2px 2px black;
 }
@@ -62,44 +47,77 @@
   text-align: center;
 }
 
-footer{
+.img-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://link-to-your/image.jpg) no-repeat;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+#tagline{
+  background-image: url(../img/Homepage.jpg);
+  background-size: cover;
+  padding: 30% 10%;
   text-align: center;
-  font-size: .5em;
+  box-shadow: 0px 0px 10px black;
+}
+
+#taglinetext{
+  color: white;
+  font-weight: bold;
+  padding-top: 20%;
+  font-size: 1.5em;
+}
+
+#team{
+  background-image: url(../img/group.png);
+  padding: 15% 10%;
+  background: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #footerLogo {
-    width: 42%;
-    height: 15%;
+  width: 42%;
+  height: 15%;
 }
 
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
-    #tagline{
-      padding: 10% 10%;
-    }
-
-    #taglinetext{
-      color: white;
-      font-weight: bold;
-      padding-top: 5%;
-      font-size: 175%;
-      text-shadow: 2px 1px grey;
-    }
-
-    .lastcta{
-      padding: 4%;
-    }
-
-    footer{
-      font-size: .5em;
-      padding: 0;
-      margin: 0;
-    }
-
-    #footerLogo {
-        width: 28%;
-        height: 15%;
-    }
+  p {
+    font-size: 40px;
+  }
+  footer{
+    font-size: .5em;
+    padding: 0;
+    margin: 0;
+  }
+  .lastcta{
+    padding: 4%;
+  }
+  #tagline{
+    padding: 10% 10%;
+    font-size: 0.75em;
+  }
+  #taglinetext{
+    color: white;
+    font-weight: bold;
+    padding-top: 5%;
+    font-size: 175%;
+    text-shadow: 2px 1px grey;
+  }
+  #footerLogo {
+    width: 28%;
+    height: 15%;
+  }
 }
 /**********TABLET*************/
 @media screen and (min-width: 750px) {
@@ -108,7 +126,6 @@ footer{
     padding: 10% 10%;
     text-align: center;
   }
-
   #taglinetext{
     color: white;
     font-size: 400%;
@@ -116,64 +133,50 @@ footer{
     font-weight: bold;
     padding-top: 10%;
   }
-
 }
 
 /**********TABLET LANDSCAPE*************/
 @media screen and (min-width: 750px) and (orientation: landscape){
-  #team{
-      background-image: url(../img/group.png);
-      padding: 10% 10%;
-      background: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-  }
-
   .teamText{
     color: white;
     font-weight: bold;
-    font-size: 400%;
+    font-size: 4em;
     text-align: center;
     text-shadow: 2px 2px black;
   }
-
+  #team{
+    background-image: url(../img/group.png);
+    padding: 10% 10%;
+    background: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
 
 /**********iPad*************/
 @media screen and (min-width: 1000px) {
-  #tagline{
-    background-position: center center;
-    padding: 10% 10%;
-    text-align: center;
+  p {
+    font-size: 20px;
   }
-
-  #taglinetext{
-    color: white;
-    font-size: 200%;
-    text-shadow: 2px 2px black;
-    font-weight: bold;
-    padding-top: 10%;
+  button {
+    font-size: 1.5em;
   }
-
   .cta{
     border: 1px solid white;
     padding: 2%;
     background: #53b0bd;
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
-    /*transition-property: background;*/
     transition-property: all;
     transition-duration: .25s;
     transition-timing-function: linear;
   }
-
   .cta:hover{
     color: white;
     background: #12646f;
     border-radius: 25px;
   }
-
   .lastcta{
     padding-top: 2%;
     padding-left: 0%;
@@ -181,11 +184,9 @@ footer{
     padding-bottom: 0%;
     text-align: center;
   }
-
   .bodycopy{
     padding: 5% 10%;
   }
-
   .test{
     display: flex;
     align-items: center;
@@ -193,26 +194,9 @@ footer{
     padding: 5% 10%;
     text-align: left;
   }
-
   .testText{
     padding-left: 5%;
   }
-
-  #footerLogo {
-      margin-top: 2%;
-      width: 25%;
-      height: 15%;
-  }
-
-  #team{
-      background-image: url(../img/group.png);
-      padding: 15% 10%;
-      background: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-  }
-
   .teamText{
     color: white;
     font-weight: bold;
@@ -220,27 +204,42 @@ footer{
     text-align: center;
     text-shadow: 2px 2px black;
   }
-
-
-}
-
-
-/**********DESKTOP*************/
-@media screen and (min-width: 1080px) {
   #tagline{
     background-position: center center;
     padding: 10% 10%;
     text-align: center;
   }
-
   #taglinetext{
     color: white;
-    font-size: 250%;
+    font-size: 2em;
     text-shadow: 2px 2px black;
     font-weight: bold;
     padding-top: 10%;
   }
+  #footerLogo {
+    margin-top: 2%;
+    width: 25%;
+    height: 15%;
+  }
+  #team{
+    background-image: url(../img/group.png);
+    padding: 15% 10%;
+    background: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
 
+
+/**********DESKTOP*************/
+@media screen and (min-width: 1080px) {
+  footer{
+    text-align: center;
+    background-color: #ececec;
+    padding: 1.5em;
+    font-size: 1em;
+  }
   .cta{
     border: 1px solid white;
     color: white;
@@ -248,19 +247,16 @@ footer{
     background:#12646f;
     font-family: 'Ubuntu', sans-serif;
     margin: 2% auto;
-    /*transition-property: background;*/
     transition-property: all;
     transition-duration: .25s;
     transition-timing-function: linear;
   }
-
   .cta:hover{
     border: 1px solid white;
     color: white;
     background: #53b0bd;
     border-radius: 25px;
   }
-
   .lastcta{
     padding-top: 2%;
     padding-left: 0%;
@@ -268,11 +264,9 @@ footer{
     padding-bottom: 0%;
     text-align: center;
   }
-
   .bodycopy{
     padding: 5% 10%;
   }
-
   .test{
     display: flex;
     align-items: center;
@@ -280,20 +274,9 @@ footer{
     padding: 5% 10%;
     text-align: left;
   }
-
   .testText{
     padding-left: 5%;
   }
-
-  #team{
-      background-image: url(../img/group.png);
-      padding: 15% 10%;
-      background: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-  }
-
   .teamText{
     color: white;
     font-weight: bold;
@@ -301,18 +284,29 @@ footer{
     text-align: center;
     text-shadow: 2px 2px black;
   }
-
-footer{
-  text-align: center;
-  background-color: #ececec;
-  padding: 1.5em;
-  font-size: 1em;
-}
-
-#footerLogo {
+  #tagline{
+    background-position: center center;
+    padding: 10% 10%;
+    text-align: center;
+  }
+  #taglinetext{
+    color: white;
+    font-size: 250%;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    padding-top: 10%;
+  }
+  #team{
+    background-image: url(../img/group.png);
+    padding: 15% 10%;
+    background: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  #footerLogo {
     margin-top: 2%;
     width: 10%;
     height: 15%;
-}
-
+  }
 }
