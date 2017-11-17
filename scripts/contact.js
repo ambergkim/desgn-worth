@@ -1,9 +1,12 @@
 'use strict';
 //event listener to grab formButton
-var submitMessage = document.getElementById('submitMessage');
+var submitMsg = document.getElementById('submitMsg');
+console.log(submitMsg);
 var formButton = document.getElementById('contactForm');
-var showMessage = function(event) {
+var showMsg = function(event) {
   event.preventDefault();
-  submitMessage.style.visibility = 'visible';
+  var confirmMsg = document.getElementById('confirmMsg');
+  confirmMsg.classList.remove('shrunkenConfirm');
+  confirmMsg.classList.add('expandedConfirm');
 };
-contactForm.addEventListener('submit', showMessage);
+contactForm.addEventListener('submit', showMsg);

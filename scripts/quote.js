@@ -55,9 +55,14 @@ function submitBasicForm(event) {
 
   localStorage.setItem('UserOne', JSON.stringify(userInfo));
   var retrievedObject = localStorage.getItem('UserOne');
-}
 
-basicFormEl.addEventListener('submit', submitBasicForm);
+  basicFormDiv.setAttribute('class', 'hideSection');
+  projectInfoDiv.classList.remove('hideSection');
+}
+//submits user info
+basicFormEl.addEventListener('submit', function(event){
+  submitBasicForm(event);
+});
 
 function Project(projectType, pages, products, courses, rushOrder, marketing, reviewManagement, websiteMaintenance) {
   this.projectType = projectType;
@@ -154,6 +159,9 @@ function submitProjectInfo(event) {
   newProject.calcTime();
   newProject.calcCost();
 
+  localStorage.setItem('ProjectOne', JSON.stringify(projectQuote));
+  var retrievedObject = localStorage.getItem('ProjectOne');
+
   if (newProject.projectType === 'basic') {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Basic 5 Page Website Base: $5,000');
@@ -169,7 +177,7 @@ function submitProjectInfo(event) {
     var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
-  }else if(newProject.projectType === 'onlineCourse') {
+  } else if (newProject.projectType === 'onlineCourse') {
     var baseLi = document.createElement('li');
     var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
     baseLi.appendChild(baseNode);
@@ -193,28 +201,28 @@ function submitProjectInfo(event) {
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
-  if (newProject.rush > 0) {
+  if (newProject.rush < newProject.timeline) {
     var additionalCost = newProject.rushCost - newProject.totalCost;
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString());
+    var baseNode = document.createTextNode('Requested Timeline adds an Additional: $' + additionalCost.toLocaleString(undefined, {maximumFractionDigits: 2}));
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   if (newProject.marketing === true) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('Thank you for your interest in Markting, we will have our marketing specialist sitting in our your follow-up call.');
+    var baseNode = document.createTextNode('Thank you for your interest in Marketing. We will have our marketing specialist sitting in during your follow-up call.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   if (newProject.reviewManagement === true) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation, we are excited about the possibility of helping you get more "5-Star" reviews online.');
+    var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation. We are excited about the possibility of helping you get more "5-Star" reviews online.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
   if (newProject.websiteMaintenance === true) {
     var baseLi = document.createElement('li');
-    var baseNode = document.createTextNode('We have many different levels of Website Maintenance, in our follow-up call we will go over the different levels and help you pick out the right level.');
+    var baseNode = document.createTextNode('We have many different levels of Website Maintenance! In our follow-up call, we will go over the different levels and help you choose which fits you best.');
     baseLi.appendChild(baseNode);
     costBreakDownUl.appendChild(baseLi);
   }
@@ -229,13 +237,57 @@ function submitProjectInfo(event) {
     reqTimelineSpan.innerText = 'n/a';
   }
   if (newProject.rushCost > newProject.totalCost) {
-    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.rushCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
   } else {
-    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString();
+    totalCostSpan.innerText = '$' + newProject.totalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
   }
+  tealSection.setAttribute('class', 'hideSection');
+  projectInfoDiv.setAttribute('class', 'hideSection');
+  proposalSection.classList.remove('hideSection');
 }
 
-projectInfo.addEventListener('submit', submitProjectInfo);
+//submits project info
+projectInfo.addEventListener('submit', function(event){
+  submitProjectInfo(event);
+});
+
+var basicRadio = document.getElementById('basic');
+var eCommerceRadio = document.getElementById('eCommerce');
+var membershipRadio = document.getElementById('membership');
+var onlineCourseRadio = document.getElementById('onlineCourse');
+var productsInput = document.getElementById('products');
+var coursesInput = document.getElementById('courses');
+basicRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+eCommerceRadio.addEventListener('click', function(event){
+  productsInput.removeAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+membershipRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.setAttribute('disabled', '');
+});
+onlineCourseRadio.addEventListener('click', function(event){
+  productsInput.setAttribute('disabled', '');
+  coursesInput.removeAttribute('disabled', '');
+});
+
+// hide 'intro section' and show 'basic info' form
+var graySection = document.getElementById('intro');
+var letsStartButton = document.getElementById('start');
+var basicFormDiv = document.getElementById('basicInfo');
+var tealSection = document.getElementById('forms');
+var projectInfoDiv = document.getElementById('projectInfo');
+var proposalSection = document.getElementById('proposal');
+
+letsStartButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  graySection.setAttribute('class', 'hideSection');
+  tealSection.classList.remove('hideSection');
+  basicFormDiv.classList.remove('hideSection');
+});
 
 function firstLetterCapital (word) {
   var wordArray = word.split(' ');
@@ -245,3 +297,114 @@ function firstLetterCapital (word) {
   }
   return newWordArray.join(' ');
 }
+
+var resetPreviousSession = document.getElementById('reset');
+reset.addEventListener('click', function(event){
+  alert('Previous session is erased. You can now fill out your info from the beginning.')
+  event.preventDefault();
+  localStorage.clear();
+});
+
+function restoreSession(){
+  if (localStorage.getItem('UserOne') === null || localStorage.getItem('ProjectOne') === null) {
+    alert('Oops! There is no previous session, please fill in your information from the beginning.');
+    localStorage.clear();
+  } else {
+    console.log('There is stuff in localStorage');
+    var getUserInfo = localStorage.getItem('UserOne');
+    var getProjectInfo = localStorage.getItem('ProjectOne');
+    var userInfo = JSON.parse(getUserInfo);
+    var projectInfo = JSON.parse(getProjectInfo);
+    var currentUser = userInfo[0];
+    var currentProject = projectInfo[0];
+    if (currentProject.projectType === 'basic') {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Basic 5 Page Website Base: $5,000');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    } else if (currentProject.projectType === 'eCommerce') {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Basic eCommerce (10 Pages + first 5 products): $15,000');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    } else if(currentProject.projectType === 'membership') {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Basic Membership (10 Pages and 3 Membership Levels): $15,000');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    } else if (currentProject.projectType === 'onlineCourse') {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Basic Online Course (10 Pages and 1 Course): $15,000');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.pages > 0) {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Extra Pages: ' + currentProject.pages + '. Cost: $' + currentProject.pagesCost.toLocaleString());
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.products > 0) {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Extra Products: ' + currentProject.products + '. Cost: $' + currentProject.productsCost.toLocaleString());
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.courses > 0) {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Extra Courses: ' + currentProject.courses + '. Cost: $' + currentProject.courseCost.toLocaleString());
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.rush < currentProject.timeline) {
+      var additionalCost = currentProject.rushCost - currentProject.totalCost;
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Requested Timeline Adds an Additional: $' + additionalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2}));
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.marketing === true) {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('Thank you for your interest in Markting, we will have our marketing specialist sitting in our your follow-up call.');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.reviewManagement === true) {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('It is good that you are being proactive with your online reputation, we are excited about the possibility of helping you get more "5-Star" reviews online.');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    if (currentProject.websiteMaintenance === true) {
+      var baseLi = document.createElement('li');
+      var baseNode = document.createTextNode('We have many different levels of Website Maintenance, in our follow-up call we will go over the different levels and help you pick out the right level.');
+      baseLi.appendChild(baseNode);
+      costBreakDownUl.appendChild(baseLi);
+    }
+    projectTitle.textContent = firstLetterCapital(currentProject.projectType);
+    clientName.textContent = currentUser.fName + ' ' + currentUser.lName;
+    dateExp();
+    validProp.textContent = month + '/' + day + '/' + year;
+    timelineSpan.innerText = currentProject.timeline + ' weeks';
+    if (currentProject.rush < currentProject.timeline) {
+      reqTimelineSpan.innerText = currentProject.rush + ' weeks';
+    } else {
+      reqTimelineSpan.innerText = 'n/a';
+    }
+    if (currentProject.rushCost > currentProject.totalCost) {
+      totalCostSpan.innerText = '$' + currentProject.rushCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
+    } else {
+      totalCostSpan.innerText = '$' + currentProject.totalCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
+    }
+    tealSection.setAttribute('class', 'hideSection');
+    projectInfoDiv.setAttribute('class', 'hideSection');
+    proposalSection.classList.remove('hideSection');
+  }
+};
+
+var restorePreviousSession = document.getElementById('restore');
+restore.addEventListener('click', function(event){
+  event.preventDefault();
+  console.log('Event is listening');
+  restoreSession();
+});

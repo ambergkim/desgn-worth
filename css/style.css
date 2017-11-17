@@ -20,9 +20,8 @@
 
 #section1 {
   background: url(../img/mountain.jpg);
-  height: 50vh;
   background-size: cover;
-  padding-top: 30%;
+  background-position: center center;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -42,8 +41,10 @@
 }
 
 .bannerquote {
+  color: white;
   font-size: 2em;
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 .img-circle {
@@ -214,8 +215,10 @@ h1 {
   }
 
 .bannerquote {
+  color: black;
   font-size: 2em;
   text-align: center;
+  text-shadow: none;
 }
 
 #contactBottom {
@@ -245,6 +248,10 @@ h1 {
 
 .container {
   margin-top: 3%;
-  /*display: flex;*/
+  
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 }

@@ -1,5 +1,5 @@
 p {
-  font-size: 14px;
+  font-size: 16px;
   font-style: 'Ubuntu', sans-serif;
 }
 
@@ -35,10 +35,13 @@ form {
 
 fieldset {
   padding: 5%;
+  font-size: 1.5em;
 }
 
-input {
+input, textarea {
   margin-bottom: 3%;
+  font-size: .7em;
+  resize: none;
 }
 
 legend {
@@ -68,6 +71,7 @@ label {
   padding: 5%;
   background: #ececec;
   color: #12646f;
+  font-size: .8em;
   font-weight: 1px;
   font-family: 'Ubuntu', sans-serif;
   padding: 2% 2% 2% 2%;
@@ -88,9 +92,27 @@ label {
   width: 100%;
 }
 
-#submitMessage {
-  visibility: hidden;
-  background-color: #53b0bd;
+#submitMsg {
+  background-color: #12646f;
+  color: white;
+  text-shadow: 0 0 1px black;
+  font-weight: bold;
+  margin: 0;
+  padding: 2%;
+  width: 100% auto;
+  text-align: center;
+}
+
+#emailAddress:hover {
+  color: #12646f;
+}
+
+.shrunkenConfirm {
+  display: none;
+}
+
+.expandedConfirm {
+  display: initial;
 }
 
 #coffee {
@@ -106,30 +128,38 @@ label {
 }
 
 #instagram {
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
 }
 
 #facebook {
-  width: 17%;
-  height: 17%;
+  width: 14%;
+  height: 14%;
 }
 
 /*****FOOTER*****/
-#footer {
+footer {
   text-align: center;
-  background-color: #ececec;
-  padding: 1.5em;
-  font-size: 1em;
+  font-size: 0.7em;
+  font-family: 'Cabin';
 }
 
 #footerLogo {
-  width: 15%;
-  height: 15%;
+    width: 42%;
+    height: 15%;
 }
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
+  footer {
+    font-size: .5em;
+    padding: 0;
+    margin: 0;
+  }
 
+  #footerLogo {
+      width: 28%;
+      height: 15%;
+  }
 }
 /**********TABLET*************/
 @media screen and (min-width: 750px) {
@@ -164,6 +194,7 @@ label {
 
   #columnOne {
     flex-basis: 50%;
+    width: 340px;
   }
 
   #contactForm {
@@ -174,5 +205,23 @@ label {
 
   input {
     width: 80%;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #ececec;
+    padding: 1.5em;
+    font-size: 1em;
+  }
+
+  footer p {
+    font-size: 1em;
+    font-family: 'Cabin'
+  }
+
+  #footerLogo {
+      margin-top: 2%;
+      width: 10%;
+      height: 15%;
   }
 }
