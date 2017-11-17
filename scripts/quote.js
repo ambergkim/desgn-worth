@@ -300,7 +300,7 @@ function firstLetterCapital (word) {
 
 var resetPreviousSession = document.getElementById('reset');
 reset.addEventListener('click', function(event){
-  alert('Previous session is erased. You can now fill out your info from the beginning.')
+  alert('Previous session is erased. You can now fill out your info from the beginning.');
   event.preventDefault();
   localStorage.clear();
 });
