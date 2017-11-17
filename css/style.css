@@ -40,11 +40,14 @@
   font-size: 30px;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .bannerquote {
   color: white;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
   text-shadow: 2px 2px black;
 }
@@ -68,6 +71,7 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -76,9 +80,9 @@ h1 {
 
 .container {
   margin-top: 3%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*flex-direction: row;*/
 }
 
 .bio {
