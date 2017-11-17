@@ -78,7 +78,6 @@ h1 {
   text-align: center;
 }
 
-
 .container {
   height:100%
   margin-top: 3%;
@@ -248,7 +247,7 @@ h1 {
 
 .container {
   margin-top: 3%;
-  
+
   display: flex;
   justify-content: space-around;
   flex-direction: row;
