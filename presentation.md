@@ -40,22 +40,14 @@ AMBER: And I'm Amber. InvoQuote was my idea. I pitched it to our class and our D
 * Getting a responsive menu and adding animation to the hamburger was also really fun.
 
 
-CHRIS: Hi I'm Chris. I did....
+CHRIS: Good afternoon, I'm Chris! --include quick personal info and goals related to CodeFellows--
 
-* Directing user experience and displaying our calculated data correctly in order to clearly present the proposal at the end of the app.
+* One of the technical aspects of this project that I enjoyed working on and solving was guiding the user experience and displaying data correctly in order to clearly present the proposal at the end of the app. Throughout the programming process we always kept the user in mind first, so we wanted to ensure that a) the forms were visually appealing and simple to use, and b) the user's design requests and timeframe needs were explicitly included in the final proposal.
+
+* Another product feature that our team is especially proud of is the showing and hiding of the user forms before displaying the final quote. I enjoyed helping to build this aspect of the project functionality because it adds value to the user experience by simplifying the information entry process.
 
 * Some of the things we did to help overcome these challenges included pair - or even group programming, and writing or drawing out our logic and structure to communicate our ideas and work them out with each other.
-* Another product feature that our team enjoyed building is customizing the calculation of total cost based on user's design requests and timeframe needs.
-
-CHRIS: Good afternoon, I'm Chris! [include quick personal info and goals related to CodeFellows]
-
-* Worked in small stages or small steps to ensure we would gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
-
-
-* Another product feature that our team is especially proud of is the showing and hiding of the user forms and the display of the user's inputs and calculated cost in the final quote. I enjoyed helping to build this aspect of the project functionality of the user forms, as well as the display of the final quote.
 
 * Worked in small stages to gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
-
-* Contribution Specifics:
 
 Do you have any questions?
