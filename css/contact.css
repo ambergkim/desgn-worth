@@ -159,18 +159,6 @@ label {
   height: 14%;
 }
 
-/*****FOOTER*****/
-footer {
-  text-align: center;
-  font-size: 0.7em;
-  font-family: 'Cabin';
-  padding-top: 2%;
-}
-
-#footerLogo {
-    width: 42%;
-    height: 15%;
-}
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   p {
@@ -191,17 +179,8 @@ footer {
   label {
     font-size: 1.75em;
   }
-  footer {
-    font-size: .5em;
-    padding: 0;
-    margin: 0;
-  }
   #formButton {
     font-size: 2em;
-  }
-  #footerLogo {
-      width: 28%;
-      height: 15%;
   }
 }
 /**********TABLET*************/
@@ -237,16 +216,6 @@ footer {
     padding: 0.25em;
     width: 95%;
   }
-  footer {
-    text-align: center;
-    background-color: #ececec;
-    padding: 1.5em;
-    font-size: 1em;
-  }
-  footer p {
-    font-size: 1em;
-    font-family: 'Cabin'
-  }
   .row {
     display: flex;
     flex-direction: row-reverse;
@@ -269,10 +238,5 @@ footer {
   }
   #formButton {
     font-size: 1.5em;
-  }
-  #footerLogo {
-      margin-top: 2%;
-      width: 10%;
-      height: 15%;
   }
 }

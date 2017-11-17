@@ -167,19 +167,6 @@ button {
   color: #000;
 }
 
-/* FOOTER SECTION*/
-#footer {
-  text-align: center;
-  background-color: #ececec;
-  padding: 1.5em;
-  font-size: 1em;
-}
-
-#footerLogo {
-  width: 15%;
-  height: 15%;
-}
-
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   * {
