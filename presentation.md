@@ -39,8 +39,10 @@ Some of the challenges we ran into were:
 * Some of the things we did to help overcome these challenges included pair - or even group programming, and writing or drawing out our logic and structure to communicate our ideas and work them out with each other.
 
 CHRIS:
-* Another thing we did was to work in small stages or small steps to ensure we would gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
-* More specifically one of the challenges we ran into was after our app was mostly done and then we added the hiding/showing feature, it broke our app. We figured out that we needed to consolidate some event listeners in order to make it work again.
+* Worked in small stages or small steps to ensure we would gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
+
+* One of the challenges we ran into was a conflict with our quote page between the hide/show feature of the forms and the final display of the user's inputs in the quote. We discovered that we had competing event listeners and realized that we needed to consolidate them in order to make it work again. By pair-programming and coding our functions in small blocks at a time, we were able to quickly pinpoint the issue.
+
 * Math for the multiplier and implementing local storage was also a challenge. For these, we had to go to the whiteboard to write out our code structure and logic.
 
 Do you have any questions?
