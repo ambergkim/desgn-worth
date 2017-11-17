@@ -60,11 +60,12 @@
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-.topimg {
+.testimonialimg {
   padding: 2%;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 .testimonial {
@@ -76,11 +77,13 @@ h1 {
   text-align: center;
 }
 
+
 .container {
+  height:100%
   margin-top: 3%;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column;*/
 }
 
 .bio {
@@ -103,38 +106,35 @@ h1 {
   margin-left: 5%;
 }
 
+.topthreedivs {
+  width: 33%;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.bottomtwo {
+  width: 49%;
+  float:left;
+}
+
 /*****FOOTER*****/
-#footer {
+/*#footer {
   text-align: center;
   background-color: #ececec;
   padding: 1.5em;
   margin-top: 2em;
   font-size: 0.5em;
-}
+}*/
 
 #footerLogo {
   width: 15%;
   height: 15%;
 }
 
-.container2 {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 20%;
-  margin: 5%;
-  margin-top: 0%;
+#bottomcontainer {
+  float:left;
 }
-
-#alicia {
-  margin-top: -10%;
-}
-
-#devin {
-  margin-top: -5%;
-}
-
-
 
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
@@ -188,7 +188,7 @@ h1 {
   }
   .topNav {
     background-color: transparent;
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -230,8 +230,8 @@ h1 {
 }
 
 .testimonial {
-  flex-direction: row;
-  display: flex;
+  /*flex-direction: row;
+  display: flex;*/
 }
 
 .row {
@@ -245,6 +245,6 @@ h1 {
 
 .container {
   margin-top: 3%;
-  display: flex;
+  /*display: flex;*/
 }
 }
