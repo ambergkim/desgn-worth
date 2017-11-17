@@ -18,6 +18,7 @@ More importantly, we have our new product our InvoQuote that lets you send your 
 Hi I'm ___________________.
 And I'm ____________________.
 And here is InvoQuote ________________________.
+
 (invoquote walkthrough).
 
 * Introduce app, show in mobile version-designed mobile first responsive, utilized a hamburger option for our menu.
@@ -28,7 +29,7 @@ And here is InvoQuote ________________________.
 * Forms and Project Proposal pages
 And that's it! Now here is Amber and Chris to talk about the challenges we went through and overcame and to answer your questions.
 
-## Challenges: Chris
+## Challenges: Chris & Amber
 
 AMBER: And I'm Amber. InvoQuote was my idea. I pitched it to our class and our Design Worth team brought it to life.
 
@@ -43,10 +44,18 @@ CHRIS: Hi I'm Chris. I did....
 
 * Directing user experience and displaying our calculated data correctly in order to clearly present the proposal at the end of the app.
 
+* Some of the things we did to help overcome these challenges included pair - or even group programming, and writing or drawing out our logic and structure to communicate our ideas and work them out with each other.
+* Another product feature that our team enjoyed building is customizing the calculation of total cost based on user's design requests and timeframe needs.
+
+CHRIS: Good afternoon, I'm Chris! [include quick personal info and goals related to CodeFellows]
+
 * Worked in small stages or small steps to ensure we would gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
 
-* One of the challenges we ran into was a conflict with our quote page between the hide/show feature of the forms and the final display of the user's inputs in the quote. We discovered that we had competing event listeners and realized that we needed to consolidate them in order to make it work again. By pair-programming and coding our functions in small blocks at a time, we were able to quickly pinpoint the issue.
 
-* Math for the multiplier and implementing local storage was also a challenge. For these, we had to go to the whiteboard to write out our code structure and logic.
+* Another product feature that our team is especially proud of is the showing and hiding of the user forms and the display of the user's inputs and calculated cost in the final quote. I enjoyed helping to build this aspect of the project functionality of the user forms, as well as the display of the final quote.
+
+* Worked in small stages to gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
+
+* Contribution Specifics:
 
 Do you have any questions?
