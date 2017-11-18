@@ -31,13 +31,17 @@ And that's it! Now here is Amber and Chris to talk about the challenges we went 
 
 ## Technical Accomplishments: Chris & Amber
 
-AMBER: And I'm Amber. InvoQuote was my idea. I pitched it to our class and our Design Worth team brought it to life.
+AMBER: And I'm Amber Kim. I have been designing and building WordPress websites using prebuilt design tools, but my goal at CodeFellows is to be able to build extensive modern Web Apps from the ground up through CodeFellows.
 
-* My favorite part of this project was pair programming the core functionalities of the InvoQuote app like the basics of the project form with Alicia, local storage with Devin, and hiding and showing different parts of the Quote app with Chris.
+InvoQuote was an idea I pitched to our class that was just a wishlist I wanted to have for my own website, and our Design Worth team brought it to life.
 
-* I also loved taking on the challenge and the triumph of solving bugs that we find along the way and sharing web design knowledge I have from before CodeFellows like using FlexBox and basic mobile first design.
-
+My favorite part of this project was collaborating with my teammates:
+* pair programming the core functionalities of the InvoQuote app like the basics of the project form with Alicia
+* local storage with Devin
+* hiding and showing different parts of the Quote app with Chris, * solving solving bugs that we find along the alway
+* and sharing web design knowledge I have from before CodeFellows like using FlexBox and basic mobile first design which I am very proud of my team who took to the challenge of learning these new tools so enthusiastically.
 * Getting a responsive menu and adding animation to the hamburger was also really fun.
+* I'm really excited to build even more amazing apps with my classmates for the rest of our time here at CodeFellows.
 
 
 CHRIS: Good afternoon, I'm Chris! --include quick personal info and goals related to CodeFellows--
