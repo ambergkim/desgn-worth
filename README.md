@@ -70,7 +70,7 @@ To reset the previous session information, click the Reset Previous Session link
 # <a name="details"></a> More Project Details
 
 ## Project Topic
-Web app for freelancers & agencies
+InvoQuote. A web app for freelancers & agencies
 
 ## Problem to be Solved
 Time consuming process for getting online cost of website design ('InvoQuote')
