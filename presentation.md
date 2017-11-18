@@ -29,7 +29,7 @@ And here is InvoQuote ________________________.
 * Forms and Project Proposal pages
 And that's it! Now here is Amber and Chris to talk about the challenges we went through and overcame and to answer your questions.
 
-## Challenges: Chris & Amber
+## Technical Accomplishments: Chris & Amber
 
 AMBER: And I'm Amber. InvoQuote was my idea. I pitched it to our class and our Design Worth team brought it to life.
 
@@ -42,7 +42,7 @@ AMBER: And I'm Amber. InvoQuote was my idea. I pitched it to our class and our D
 
 CHRIS: Good afternoon, I'm Chris! --include quick personal info and goals related to CodeFellows--
 
-* One of the technical aspects of this project that I enjoyed working on and solving was guiding the user experience and displaying data correctly in order to clearly present the proposal at the end of the app. Throughout the programming process we always kept the user in mind first, so we wanted to ensure that a) the forms were visually appealing and simple to use, and b) the user's design requests and timeframe needs were explicitly included in the final proposal.
+* One of the technical features of this project that I enjoyed working on and helping our team to solve was guiding the user experience and storing their data correctly in order to clearly display the proposal. Throughout the programming process we always kept the user in mind first, so we wanted to ensure that a) the forms were visually appealing, yet simple to use, and b) the user's design requests and timeframe needs were explicitly taken into account in calculating the final quote. We're confident that user will appreciate the simplicity in using the forms and the professional appearance
 
 * Another product feature that our team is especially proud of is the showing and hiding of the user forms before displaying the final quote. I enjoyed helping to build this aspect of the project functionality because it adds value to the user experience by simplifying the information entry process.
 
