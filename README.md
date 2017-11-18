@@ -52,12 +52,12 @@ The user can fill the form with their project information.
 
 The user can view their individualized project proposal.
 
-#### <a name"contact-us"></a>Contact Us
+#### <a name="contact-us"></a>Contact Us
 ![gif of contact page](/blueprints/screen-capture/step-5-contact.gif "Step 5")
 
 To move forward with the project, click the user can click the button at the bottom of the proposal to be directed to the contact page.
 
-#### <a name"restore"></a>Restore Previous Session Option
+#### <a name="restore"></a>Restore Previous Session Option
 ![gif of restore previous session option](/blueprints/screen-capture/restore-previous-session.gif "How to Restore Your Previous Session")
 
 If the user wants to restore their previous quote session, they can click the Restore Previous Session link.
