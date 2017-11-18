@@ -1,10 +1,10 @@
 p {
   font-size: 50px;
-  font-style: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1, h2, h3 {
-  font-style: 'Cabin', sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 h1 {
@@ -37,6 +37,7 @@ form {
 
 fieldset {
   padding: 5%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 input, textarea {
