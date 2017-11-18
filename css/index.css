@@ -19,6 +19,11 @@ button {
   padding: 10% 10%;
 }
 
+#aboutText {
+  font-weight: bold;
+  text-align: center;
+}
+
 .teamText{
   color: white;
   font-weight: bold;
