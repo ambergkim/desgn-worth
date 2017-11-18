@@ -43,11 +43,11 @@ My favorite part of this project was collaborating with my teammates:
 * I'm really excited to build even more amazing apps with my classmates for the rest of our time here at CodeFellows.
 
 
-CHRIS: Good afternoon, I'm Chris! --include quick personal info and goals related to CodeFellows--
+CHRIS: Good afternoon, I'm Chris! (My background is in aerospace and I plan on using my development skills from CodeFellows in conjunction with the work being done in the space exploration industry.)
 
-* One of the technical features of this project that I enjoyed working on and helping our team to solve was guiding the user experience and storing their data correctly in order to clearly display the proposal. Throughout the programming process we always kept the user in mind first, so we wanted to ensure that a) the forms were visually appealing, yet simple to use, and b) the user's design requests and timeframe needs were explicitly taken into account in calculating the final quote. We're confident that user will appreciate the simplicity in using the forms and the professional appearance
+* One of the technical features of this project that I enjoyed working on and helping our team to solve was guiding the user experience and storing their data accurately in order to clearly display the proposal.  We always kept the user in mind first throughout the programming process, so we wanted to ensure that a) the forms in InvoQuote were visually appealing, yet simple to use, and b) the user's design requests and timeframe needs were explicitly taken into account in calculating the final proposal. We're confident that users will appreciate the simplicity in using the forms and the professional appearance of InvoQuote.
 
-* Another product feature that our team is especially proud of is the showing and hiding of the user forms before displaying the final quote. I enjoyed helping to build this aspect of the project functionality because it adds value to the user experience by simplifying the information entry process.
+* Another feature, among many, that our team is especially proud of is the showing and hiding of the user info forms before displaying the final quote. I definitely enjoyed helping to program this aspect of the project's functionality because it adds value to the app experience by streamlining the user input process and making the experience for users more engaging.
 
 * Some of the things we did to help overcome these challenges included pair - or even group programming, and writing or drawing out our logic and structure to communicate our ideas and work them out with each other.
 
