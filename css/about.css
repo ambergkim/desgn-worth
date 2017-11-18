@@ -130,20 +130,6 @@ a:visited {
   font-style: italic;
 }
 
-/*****FOOTER*****/
-#footer {
-  text-align: center;
-  background-color: #ececec;
-  padding: 1.5em;
-  margin-top: 2em;
-  font-size: 0.5em;
-}
-
-#footerLogo {
-  width: 15%;
-  height: 15%;
-}
-
 /**********PHONE LANDSCAPE*************/
 @media screen and (orientation: landscape) {
   h1 {
