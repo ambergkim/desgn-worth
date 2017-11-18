@@ -199,7 +199,7 @@ button {
   }
   h1{
     font-size: 2em;
-    margin-top: 8%;
+    margin-top: 6%;
   }
   h2 {
     font-size: 2em;
@@ -208,6 +208,7 @@ button {
   }
   li{
     font-size: 1.2em;
+    line-height: 1.5em;
   }
   form {
     width: 50%;

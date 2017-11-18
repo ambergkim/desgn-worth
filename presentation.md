@@ -18,39 +18,37 @@ More importantly, we have our new product our InvoQuote that lets you send your 
 Hi I'm ___________________.
 And I'm ____________________.
 And here is InvoQuote ________________________.
-
 (invoquote walkthrough).
 
-* Introduce app, show in mobile version-designed mobile first responsive, utilized a hamburger option for our menu.
+* Little bit about me, background, what I'm proud of and contributed too mixed into my part
+* Introduce app, show in mobile version-designed mobile first responsive, tour nav pages- utilized a hamburger option for our menu.
 * Introduce Quote homepage and user options
 * Contact page
+* Introduce Amber and Chris
 ###Devin
 * Introduce local storage (restore/reset options)
 * Forms and Project Proposal pages
 And that's it! Now here is Amber and Chris to talk about the challenges we went through and overcame and to answer your questions.
 
-## Technical Accomplishments: Chris & Amber
+## Challenges: Chris
 
-AMBER: And I'm Amber Kim. I have been designing and building WordPress websites using prebuilt design tools, but my goal at CodeFellows is to be able to build extensive modern Web Apps from the ground up through CodeFellows.
+AMBER: And I'm Amber. InvoQuote was my idea. I pitched it to our class and our Design Worth team brought it to life.
 
-InvoQuote was an idea I pitched to our class that was just a wishlist I wanted to have for my own website, and our Design Worth team brought it to life.
+* My favorite part of this project was pair programming the core functionalities of the InvoQuote app like the basics of the project form with Alicia, local storage with Devin, and hiding and showing different parts of the Quote app with Chris.
 
-My favorite part of this project was collaborating with my teammates:
-* pair programming the core functionalities of the InvoQuote app like the basics of the project form with Alicia
-* It was really cool when were finally able to add in local storage so that users can return to their generated quote.
-* It was also really fun to share web design knowledge I have like FlexBox and basic mobile first design which I am very proud that my team took to the challenge of learning these new tools so enthusiastically.
+* I also loved taking on the challenge and the triumph of solving bugs that we find along the way and sharing web design knowledge I have from before CodeFellows like using FlexBox and basic mobile first design.
+
 * Getting a responsive menu and adding animation to the hamburger was also really fun.
-* I'm really excited to build even more amazing apps with my classmates for the rest of our time here at CodeFellows.
 
 
-CHRIS: Good afternoon, I'm Chris! (My background is in aerospace and I plan on using my development skills from CodeFellows in conjunction with the work being done in the space exploration industry.)
+CHRIS: Hi I'm Chris. I did....
 
-* One of the technical features of this project that I enjoyed working on and helping our team to solve was guiding the user experience and storing their data accurately in order to clearly display the proposal.  We kept the user in mind first throughout the programming process, so we wanted to ensure that a) the forms in InvoQuote were visually appealing, yet simple to use, and b) the user's design requests and timeframe needs were explicitly taken into account when calculating the final proposal. We're confident that people will appreciate the simplicity in using the forms and the professional appearance of InvoQuote.
+* Directing user experience and displaying our calculated data correctly in order to clearly present the proposal at the end of the app.
 
-* Another feature, among many, that our team is proud of is the automatic showing and hiding of the user info forms before displaying the final quote. Our goal was to make InvoQuote more interactive and conversation-like, as opposed to one long drawn-out page, so we made into sections that show individually as the user progresses through the forms. I enjoyed helping to program this aspect of the project's functionality because it adds more value to the app experience by streamlining the user input process and making it more engaging.
+* Worked in small stages or small steps to ensure we would gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
 
-* Some of the things we did to help overcome these challenges included pair - or even group programming, and writing or drawing out our logic and structure to communicate our ideas and work them out with each other.
+* One of the challenges we ran into was a conflict with our quote page between the hide/show feature of the forms and the final display of the user's inputs in the quote. We discovered that we had competing event listeners and realized that we needed to consolidate them in order to make it work again. By pair-programming and coding our functions in small blocks at a time, we were able to quickly pinpoint the issue.
 
-* Worked in small stages to gradually build in our features. This ensured that we built on top of good code and if things went wrong, we would know what was causing it.
+* Math for the multiplier and implementing local storage was also a challenge. For these, we had to go to the whiteboard to write out our code structure and logic.
 
 Do you have any questions?
