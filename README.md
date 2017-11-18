@@ -15,15 +15,15 @@
   * [Reset Previous Session](#reset)
 * [More Project Details](#details)
 
-# <a name="team-members"></a>Team Members
+# <a name="team"></a>Team Members
 * "Alicia Lycan" <https://github.com/alicialycan>
 * "Amber Kim" <https://github.com/amgranad>
 * "Chris Lesesne" <https://github.com/clesesne3>
 * "Devin Cunningham" <https://github.com/DevinTyler26>
 * "Eric Cobb" <https://github.com/sonsofdesert>
 
-<a name="team" /a>
-## Technologies
+
+## <a name="technologies"a></a> Technologies
 * **Front-end**: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),  [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 
 ## <a name="how-to-use"></a>How to Use InvoQuote
@@ -67,8 +67,7 @@ If the user wants to restore their previous quote session, they can click the Re
 
 To reset the previous session information, click the Reset Previous Session link.
 
-<a name="details" />
-# More Project Details
+# <a name="details"></a> More Project Details
 
 ## Project Topic
 Web app for freelancers & agencies

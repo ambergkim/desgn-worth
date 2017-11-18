@@ -37,9 +37,8 @@ InvoQuote was an idea I pitched to our class that was just a wishlist I wanted t
 
 My favorite part of this project was collaborating with my teammates:
 * pair programming the core functionalities of the InvoQuote app like the basics of the project form with Alicia
-* local storage with Devin
-* hiding and showing different parts of the Quote app with Chris, * solving solving bugs that we find along the alway
-* and sharing web design knowledge I have from before CodeFellows like using FlexBox and basic mobile first design which I am very proud of my team who took to the challenge of learning these new tools so enthusiastically.
+* It was really cool when were finally able to add in local storage so that users can return to their generated quote.
+* It was also really fun to share web design knowledge I have like FlexBox and basic mobile first design which I am very proud that my team took to the challenge of learning these new tools so enthusiastically.
 * Getting a responsive menu and adding animation to the hamburger was also really fun.
 * I'm really excited to build even more amazing apps with my classmates for the rest of our time here at CodeFellows.
 
